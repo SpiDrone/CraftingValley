@@ -43,9 +43,9 @@ public class WateringSoilPlantProcedure {
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TilledEarthBlock.block) {
+		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == TilledEarthBlock.block) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = WetEarthBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -74,7 +74,7 @@ public class WateringSoilPlantProcedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -85,9 +85,9 @@ public class WateringSoilPlantProcedure {
 			for (int index0 = 0; index0 < (int) (10); index0++) {
 				world.addParticle(ParticleTypes.SPLASH, (x + 0.5), (y + 1), (z + 0.5), 0, 1, 0);
 			}
-		} else if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == TilledEarthBlock.block) {
+		} else if ((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == TilledEarthBlock.block) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
+				BlockPos _bp = new BlockPos(x, y - 1, z);
 				BlockState _bs = WetEarthBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -116,7 +116,7 @@ public class WateringSoilPlantProcedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
+				BlockPos _bp = new BlockPos(x, y - 1, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -127,11 +127,11 @@ public class WateringSoilPlantProcedure {
 			for (int index1 = 0; index1 < (int) (10); index1++) {
 				world.addParticle(ParticleTypes.SPLASH, (x + 0.5), y, (z + 0.5), 0, 1, 0);
 			}
-		} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == WetEarthBlock.block) {
+		} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthBlock.block) {
 			for (int index2 = 0; index2 < (int) (10); index2++) {
 				world.addParticle(ParticleTypes.SPLASH, (x + 0.5), (y + 1), (z + 0.5), 0, 1, 0);
 			}
-		} else if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == WetEarthBlock.block) {
+		} else if ((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == WetEarthBlock.block) {
 			for (int index3 = 0; index3 < (int) (10); index3++) {
 				world.addParticle(ParticleTypes.SPLASH, (x + 0.5), y, (z + 0.5), 0, 1, 0);
 			}

@@ -58,13 +58,13 @@ public class WetEarthUpdateProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "dayWatered")) {
+		}.getValue(world, new BlockPos(x, y, z), "dayWatered")) {
 			CropDecayProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = TilledEarthBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				TileEntity _te = world.getTileEntity(_bp);
@@ -85,16 +85,15 @@ public class WetEarthUpdateProcedure {
 				}
 			}
 			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:spring_crop"))
-					.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())) {
+					.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())) {
 				if (StarcraftvalleyModVariables.MapVariables.get(world).season == 0) {
 					returnvalue = (true);
 				} else if (StarcraftvalleyModVariables.MapVariables.get(world).season == 1
 						&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:summer_crop"))
-								.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())) {
+								.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())) {
 					returnvalue = (true);
-				} else if (StarcraftvalleyModVariables.MapVariables.get(world).season == 2
-						&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:fall_crop"))
-								.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())) {
+				} else if (StarcraftvalleyModVariables.MapVariables.get(world).season == 2 && BlockTags.getCollection()
+						.getTagByID(new ResourceLocation("forge:fall_crop")).contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())) {
 					returnvalue = (true);
 				}
 				if (returnvalue) {
@@ -105,7 +104,7 @@ public class WetEarthUpdateProcedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "crop")).equals("strawberry")) {
+					}.getValue(world, new BlockPos(x, y + 1, z), "crop")).equals("strawberry")) {
 						if (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
@@ -113,9 +112,9 @@ public class WetEarthUpdateProcedure {
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "growthStage") < 8) {
+						}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") < 8) {
 							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+								BlockPos _bp = new BlockPos(x, y + 1, z);
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
@@ -126,7 +125,7 @@ public class WetEarthUpdateProcedure {
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "growthStage") + 1));
+									}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") + 1));
 								if (world instanceof World)
 									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
@@ -137,9 +136,9 @@ public class WetEarthUpdateProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "growthStage") == 3) {
+							}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") == 3) {
 								{
-									BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+									BlockPos _bp = new BlockPos(x, y + 1, z);
 									BlockState _bs = StrawberryS2Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									TileEntity _te = world.getTileEntity(_bp);
@@ -166,9 +165,9 @@ public class WetEarthUpdateProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "growthStage") == 5) {
+							}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") == 5) {
 								{
-									BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+									BlockPos _bp = new BlockPos(x, y + 1, z);
 									BlockState _bs = StrawberryS3Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									TileEntity _te = world.getTileEntity(_bp);
@@ -195,9 +194,9 @@ public class WetEarthUpdateProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "growthStage") == 8) {
+							}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") == 8) {
 								{
-									BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+									BlockPos _bp = new BlockPos(x, y + 1, z);
 									BlockState _bs = StrawberryS4Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									TileEntity _te = world.getTileEntity(_bp);
@@ -226,7 +225,7 @@ public class WetEarthUpdateProcedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "crop")).equals("potato")) {
+					}.getValue(world, new BlockPos(x, y + 1, z), "crop")).equals("potato")) {
 						if (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
@@ -234,9 +233,9 @@ public class WetEarthUpdateProcedure {
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "growthStage") < 6) {
+						}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") < 6) {
 							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+								BlockPos _bp = new BlockPos(x, y + 1, z);
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
@@ -247,7 +246,7 @@ public class WetEarthUpdateProcedure {
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "growthStage") + 1));
+									}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") + 1));
 								if (world instanceof World)
 									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
@@ -258,9 +257,9 @@ public class WetEarthUpdateProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "growthStage") == 4) {
+							}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") == 4) {
 								{
-									BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+									BlockPos _bp = new BlockPos(x, y + 1, z);
 									BlockState _bs = PotatoS2Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									TileEntity _te = world.getTileEntity(_bp);
@@ -287,9 +286,9 @@ public class WetEarthUpdateProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) (y + 1), (int) z), "growthStage") == 6) {
+							}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") == 6) {
 								{
-									BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+									BlockPos _bp = new BlockPos(x, y + 1, z);
 									BlockState _bs = PotatoS3Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									TileEntity _te = world.getTileEntity(_bp);

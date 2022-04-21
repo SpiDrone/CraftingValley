@@ -45,27 +45,26 @@ public class CropDecayProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:spring_crop"))
-				.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())
+				.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
 				|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:summer_crop"))
-						.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())
+						.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
 				|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:fall_crop"))
-						.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())
+						.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
 				|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:winter_crop"))
-						.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())) {
+						.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())) {
 			if (!(StarcraftvalleyModVariables.MapVariables.get(world).season == 0
 					&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:spring_crop"))
-							.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())
+							.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
 					|| StarcraftvalleyModVariables.MapVariables.get(world).season == 1
 							&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:summer_crop"))
-									.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())
-					|| StarcraftvalleyModVariables.MapVariables.get(world).season == 2
-							&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:fall_crop"))
-									.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())
+									.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
+					|| StarcraftvalleyModVariables.MapVariables.get(world).season == 2 && BlockTags.getCollection()
+							.getTagByID(new ResourceLocation("forge:fall_crop")).contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
 					|| StarcraftvalleyModVariables.MapVariables.get(world).season == 3
 							&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:winter_crop"))
-									.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()))) {
+									.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()))) {
 				{
-					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+					BlockPos _bp = new BlockPos(x, y + 1, z);
 					BlockState _bs = Blocks.DEAD_BUSH.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -80,9 +79,9 @@ public class CropDecayProcedure {
 				}
 			}
 		}
-		if (world.getWorldInfo().isRaining() && world.canBlockSeeSky(new BlockPos((int) x, (int) y, (int) z))) {
+		if (world.getWorldInfo().isRaining() && world.canBlockSeeSky(new BlockPos(x, y, z))) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = WetEarthBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

@@ -70,12 +70,12 @@ public class SpringSeedsPlantProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		if (StarcraftvalleyModVariables.MapVariables.get(world).season == 0
-				&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TilledEarthBlock.block
-						|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == WetEarthBlock.block)) {
+				&& ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == TilledEarthBlock.block
+						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthBlock.block)) {
 			if (PotatoSeedsItem.block == itemstack.getItem()) {
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), PotatoS1Block.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z), PotatoS1Block.block.getDefaultState(), 3);
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+					BlockPos _bp = new BlockPos(x, y + 1, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -84,9 +84,9 @@ public class SpringSeedsPlantProcedure {
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			} else if (StrawberrySeedsItem.block == itemstack.getItem()) {
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), StrawberryS1Block.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z), StrawberryS1Block.block.getDefaultState(), 3);
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+					BlockPos _bp = new BlockPos(x, y + 1, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -95,9 +95,9 @@ public class SpringSeedsPlantProcedure {
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			} else if (CauliflowerSeedsItem.block == itemstack.getItem()) {
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), CauliflowerS1Block.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z), CauliflowerS1Block.block.getDefaultState(), 3);
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+					BlockPos _bp = new BlockPos(x, y + 1, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
