@@ -72,9 +72,9 @@ public class HarvestPotatoProcedure {
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 		}
-		world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+		world.destroyBlock(new BlockPos(x, y, z), false);
 		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = new BlockPos(x, y, z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)

@@ -64,7 +64,7 @@ public class HarvestStrawberryProcedure {
 			}
 		}
 		{
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = new BlockPos(x, y, z);
 			BlockState _bs = StrawberryS3Block.block.getDefaultState();
 			BlockState _bso = world.getBlockState(_bp);
 			TileEntity _te = world.getTileEntity(_bp);
@@ -85,7 +85,7 @@ public class HarvestStrawberryProcedure {
 			}
 		}
 		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = new BlockPos(x, y, z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
