@@ -1,7 +1,8 @@
 {
-  "parent": "block/crop",
+  "parent": "starcraftvalley:custom/24tallcross",
   "textures": {
-    "crop": "starcraftvalley:blocks/potato1",
-    "particle": "starcraftvalley:blocks/potato1"
+    "all": "starcraftvalley:blocks/potato1",
+    "particle": "starcraftvalley:blocks/potato1",
+    "0": "starcraftvalley:blocks/tallpotato1"
   }
 }

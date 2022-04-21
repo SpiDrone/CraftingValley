@@ -680,6 +680,84 @@
         ]
       },
       "path": "~/Crops/Spring"
+    },
+    {
+      "name": "TeaS1",
+      "type": "block",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tea_s_1",
+      "path": "~/Crops/Tea"
+    },
+    {
+      "name": "TeaS2",
+      "type": "block",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tea_s_2",
+      "path": "~/Crops/Tea"
+    },
+    {
+      "name": "TeaS3",
+      "type": "block",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tea_s_3",
+      "path": "~/Crops/Tea"
+    },
+    {
+      "name": "TeaS4",
+      "type": "block",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tea_s_4",
+      "path": "~/Crops/Tea"
+    },
+    {
+      "name": "Cauliflower",
+      "type": "food",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauliflower",
+      "path": "~/Crops/Spring/Cauliflower"
+    },
+    {
+      "name": "HarvestCauliflower",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harvest_cauliflower",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Spring/Cauliflower"
     }
   ],
   "variable_elements": [
@@ -715,18 +793,23 @@
       "block.starcraftvalley.grapes_s_1": "(Trellis) Grapes",
       "block.starcraftvalley.potato_s_2": "Potato Stalk",
       "block.starcraftvalley.grapes_s_4": "(Trellis) Grapes",
-      "block.starcraftvalley.potato_s_3": "Potato Stalk",
       "block.starcraftvalley.grapes_s_3": "(Trellis) Grapes",
+      "block.starcraftvalley.potato_s_3": "Potato Stalk",
+      "block.starcraftvalley.tea_s_1": "Tea Plant",
+      "block.starcraftvalley.tea_s_2": "Tea Plant",
+      "block.starcraftvalley.tea_s_3": "Tea Plant",
+      "block.starcraftvalley.tea_s_4": "Tea Plant",
       "item.starcraftvalley.potato_seeds": "Potato Seeds",
       "block.starcraftvalley.cauliflower_s_1": "Cauliflower",
       "item.starcraftvalley.strawberry_seeds": "Strawberry Seeds",
       "block.starcraftvalley.cauliflower_s_2": "Cauliflower",
-      "item.starcraftvalley.strawberry": "Strawberry",
       "block.starcraftvalley.cauliflower_s_3": "Cauliflower",
+      "item.starcraftvalley.strawberry": "Strawberry",
       "block.starcraftvalley.cauliflower_s_4": "Cauliflower",
       "block.starcraftvalley.potato_s_1": "Potato Stalk",
       "item.starcraftvalley.cauliflower_seeds": "Cauliflower Seeds",
       "block.starcraftvalley.wet_earth": "Tilled Earth",
+      "item.starcraftvalley.cauliflower": "Cauliflower",
       "block.starcraftvalley.strawberry_s_1": "Strawberry Bush",
       "block.starcraftvalley.strawberry_s_4": "Strawberry Bush",
       "block.starcraftvalley.pepper_s_3": "Pepper",
@@ -801,6 +884,10 @@
           },
           {
             "name": "Seeds",
+            "children": []
+          },
+          {
+            "name": "Tea",
             "children": []
           }
         ]
