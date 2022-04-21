@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:PepperS1"
+      },
+      {
+        "value": "CUSTOM:PepperS2"
+      },
+      {
+        "value": "CUSTOM:PepperS3"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "summer_crop",
+    "namespace": "forge"
+  }
+}

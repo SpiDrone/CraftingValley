@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "tilledearth"
+      },
+      "name": "default"
+    },
+    "wet": {
+      "map": {
+        "0": "tilledwetearth"
+      },
+      "name": "wet"
+    }
+  }
+}

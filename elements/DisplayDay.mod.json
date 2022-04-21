@@ -1,0 +1,57 @@
+{
+  "_fv": 24,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "D <VAR:integer:day>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "D <VAR:integer:day>",
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Y: <VAR:integer:year>",
+          "color": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "name": "Y: <VAR:integer:year>",
+          "x": 1,
+          "y": 23
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "S <VAR:integer:season>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "S <VAR:integer:season>",
+          "x": 0,
+          "y": 11
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

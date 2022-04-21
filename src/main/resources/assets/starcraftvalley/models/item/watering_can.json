@@ -1,0 +1,7 @@
+{
+  "parent": "starcraftvalley:custom/wateringcan",
+  "textures": {
+    "0": "starcraftvalley:blocks/wateringcan",
+    "particle": "starcraftvalley:items/strawberry"
+  }
+}

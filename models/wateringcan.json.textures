@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "wateringcan"
+      },
+      "name": "default"
+    }
+  }
+}

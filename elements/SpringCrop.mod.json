@@ -1,0 +1,47 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:StrawberryS1"
+      },
+      {
+        "value": "CUSTOM:StrawberryS2"
+      },
+      {
+        "value": "CUSTOM:StrawberryS3"
+      },
+      {
+        "value": "CUSTOM:StrawberryS4"
+      },
+      {
+        "value": "CUSTOM:PotatoS1"
+      },
+      {
+        "value": "CUSTOM:PotatoS2"
+      },
+      {
+        "value": "CUSTOM:PotatoS3"
+      },
+      {
+        "value": "CUSTOM:CauliflowerS1"
+      },
+      {
+        "value": "CUSTOM:CauliflowerS2"
+      },
+      {
+        "value": "CUSTOM:CauliflowerS3"
+      },
+      {
+        "value": "CUSTOM:CauliflowerS4"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "spring_crop",
+    "namespace": "forge"
+  }
+}

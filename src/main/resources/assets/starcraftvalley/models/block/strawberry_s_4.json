@@ -1,0 +1,7 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "starcraftvalley:blocks/bushred",
+    "particle": "starcraftvalley:blocks/bushred"
+  }
+}

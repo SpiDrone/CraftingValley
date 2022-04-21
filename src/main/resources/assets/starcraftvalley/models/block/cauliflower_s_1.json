@@ -1,0 +1,7 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "starcraftvalley:blocks/cauliflower1",
+    "particle": "starcraftvalley:blocks/cauliflower1"
+  }
+}
