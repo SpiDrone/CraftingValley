@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "potato_seed",
+    "texture": "potato_seeds",
     "customModelName": "Normal",
     "name": "Potato Seeds",
     "rarity": "COMMON",

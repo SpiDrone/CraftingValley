@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "cauliflower_seed",
+    "texture": "cauli_flower_seeds",
     "customModelName": "Normal",
     "name": "Cauliflower Seeds",
     "rarity": "COMMON",
