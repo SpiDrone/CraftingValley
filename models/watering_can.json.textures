@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "missing": "stone_watering_can"
+      },
+      "name": "default"
+    },
+    "empty_watering_can": {
+      "map": {
+        "missing": "stone_watering_can_empty"
+      },
+      "name": "empty_watering_can"
+    }
+  }
+}
