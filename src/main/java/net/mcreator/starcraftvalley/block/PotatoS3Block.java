@@ -12,6 +12,7 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Hand;
@@ -36,6 +37,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.HarvestPotatoProcedure;
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
+import net.mcreator.starcraftvalley.item.PotatoSeedsItem;
 import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
 
 import java.util.stream.Stream;
@@ -96,6 +98,11 @@ public class PotatoS3Block extends StarcraftvalleyModElements.ModElement {
 		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 4;
+		}
+
+		@Override
+		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
+			return new ItemStack(PotatoSeedsItem.block);
 		}
 
 		@Override

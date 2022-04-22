@@ -55,7 +55,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
-import net.mcreator.starcraftvalley.item.StrawberrySeedsItem;
+import net.mcreator.starcraftvalley.item.TeaSeedsItem;
 import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
 
 import javax.annotation.Nullable;
@@ -133,7 +133,7 @@ public class TeaS1Block extends StarcraftvalleyModElements.ModElement {
 
 		@Override
 		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-			return new ItemStack(StrawberrySeedsItem.block);
+			return new ItemStack(TeaSeedsItem.block);
 		}
 
 		@Override

@@ -2,7 +2,9 @@ package net.mcreator.starcraftvalley.procedures;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
@@ -37,7 +39,8 @@ public class RevertToDirtProcedure {
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if (world.getBlockState(new BlockPos(x, y + 1, z)).isSolidSide(world, new BlockPos(x, y + 1, z), Direction.DOWN)) {
+		if (world.getBlockState(new BlockPos(x, y + 1, z)).isSolidSide(world, new BlockPos(x, y + 1, z), Direction.DOWN) && !BlockTags.getCollection()
+				.getTagByID(new ResourceLocation("forge:trellis_crop")).contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())) {
 			{
 				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = Blocks.DIRT.getDefaultState();

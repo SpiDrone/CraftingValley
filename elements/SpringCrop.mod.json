@@ -37,6 +37,39 @@
       },
       {
         "value": "CUSTOM:CauliflowerS4"
+      },
+      {
+        "value": "CUSTOM:PotatoS1"
+      },
+      {
+        "value": "CUSTOM:PotatoS2"
+      },
+      {
+        "value": "CUSTOM:PotatoS3"
+      },
+      {
+        "value": "CUSTOM:CoffeeS1"
+      },
+      {
+        "value": "CUSTOM:CoffeeS2"
+      },
+      {
+        "value": "CUSTOM:CoffeeS3"
+      },
+      {
+        "value": "CUSTOM:CoffeeS4"
+      },
+      {
+        "value": "CUSTOM:TeaS1"
+      },
+      {
+        "value": "CUSTOM:TeaS2"
+      },
+      {
+        "value": "CUSTOM:TeaS3"
+      },
+      {
+        "value": "CUSTOM:TeaS4"
       }
     ],
     "functions": [],

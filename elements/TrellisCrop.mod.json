@@ -1,0 +1,26 @@
+{
+  "_fv": 27,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:GrapesS1"
+      },
+      {
+        "value": "CUSTOM:GrapesS2"
+      },
+      {
+        "value": "CUSTOM:GrapesS3"
+      },
+      {
+        "value": "CUSTOM:GrapesS4"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "trellis_crop",
+    "namespace": "forge"
+  }
+}

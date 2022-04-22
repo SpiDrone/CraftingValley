@@ -8,13 +8,13 @@
     },
     "potato2": {
       "map": {
-        "0": "potato2"
+        "0": "tallpotato2"
       },
       "name": "potato2"
     },
     "potato3": {
       "map": {
-        "0": "potato3"
+        "0": "tallpotato3"
       },
       "name": "potato3"
     },

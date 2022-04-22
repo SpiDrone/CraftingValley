@@ -63,7 +63,7 @@
     },
     "colorOnMap": "LIME",
     "creativePickItem": {
-      "value": "CUSTOM:StrawberrySeeds"
+      "value": "CUSTOM:TeaSeeds"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "WALKABLE",

@@ -679,7 +679,7 @@
           }
         ]
       },
-      "path": "~/Crops/Spring"
+      "path": "~/Crops"
     },
     {
       "name": "TeaS1",
@@ -688,7 +688,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "tea_s_1",
-      "path": "~/Crops/Tea"
+      "path": "~/Crops/Other/Tea"
     },
     {
       "name": "TeaS2",
@@ -697,7 +697,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "tea_s_2",
-      "path": "~/Crops/Tea"
+      "path": "~/Crops/Other/Tea"
     },
     {
       "name": "TeaS3",
@@ -706,7 +706,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "tea_s_3",
-      "path": "~/Crops/Tea"
+      "path": "~/Crops/Other/Tea"
     },
     {
       "name": "TeaS4",
@@ -715,7 +715,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "tea_s_4",
-      "path": "~/Crops/Tea"
+      "path": "~/Crops/Other/Tea"
     },
     {
       "name": "Cauliflower",
@@ -758,6 +758,378 @@
         ]
       },
       "path": "~/Crops/Spring/Cauliflower"
+    },
+    {
+      "name": "Tea",
+      "type": "item",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tea",
+      "path": "~/Crops/Other/Tea"
+    },
+    {
+      "name": "HarvestTea",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harvest_tea",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Other/Tea"
+    },
+    {
+      "name": "CoffeeS1",
+      "type": "block",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coffee_s_1",
+      "path": "~/Crops/Other/Coffee"
+    },
+    {
+      "name": "HarvestCoffee",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harvest_coffee",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Other/Coffee"
+    },
+    {
+      "name": "CoffeeBean",
+      "type": "item",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coffee_bean",
+      "path": "~/Crops/Other/Coffee"
+    },
+    {
+      "name": "CoffeeS2",
+      "type": "block",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coffee_s_2",
+      "path": "~/Crops/Other/Coffee"
+    },
+    {
+      "name": "CoffeeS3",
+      "type": "block",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coffee_s_3",
+      "path": "~/Crops/Other/Coffee"
+    },
+    {
+      "name": "CoffeeS4",
+      "type": "block",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coffee_s_4",
+      "path": "~/Crops/Other/Coffee"
+    },
+    {
+      "name": "TeaSeedsPlant",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tea_seeds_plant",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Other"
+    },
+    {
+      "name": "CoffeeSeedsPlant",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coffee_seeds_plant",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Other"
+    },
+    {
+      "name": "TeaSeeds",
+      "type": "item",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tea_seeds",
+      "path": "~/Crops/Seeds"
+    },
+    {
+      "name": "Pepper",
+      "type": "food",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pepper",
+      "path": "~/Crops/Summer/Pepper"
+    },
+    {
+      "name": "Grapes",
+      "type": "food",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grapes",
+      "path": "~/Crops/Fall/Grapes"
+    },
+    {
+      "name": "PepperSeeds",
+      "type": "item",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pepper_seeds",
+      "path": "~/Crops/Seeds"
+    },
+    {
+      "name": "SummerSeedsPlant",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summer_seeds_plant",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Summer"
+    },
+    {
+      "name": "GrapeSeeds",
+      "type": "item",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grape_seeds",
+      "path": "~/Crops/Seeds"
+    },
+    {
+      "name": "FallSeedsPlant",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fall_seeds_plant",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Fall"
+    },
+    {
+      "name": "TrellisCrop",
+      "type": "tag",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trellis_crop",
+      "path": "~/Tags"
+    },
+    {
+      "name": "HarvestGrapes",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harvest_grapes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Fall/Grapes"
+    },
+    {
+      "name": "HarvestPepper",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harvest_pepper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Summer/Pepper"
     }
   ],
   "variable_elements": [
@@ -790,6 +1162,7 @@
   "language_map": {
     "en_us": {
       "block.starcraftvalley.grapes_s_2": "(Trellis) Grapes",
+      "item.starcraftvalley.pepper_seeds": "Pepper Seeds",
       "block.starcraftvalley.grapes_s_1": "(Trellis) Grapes",
       "block.starcraftvalley.potato_s_2": "Potato Stalk",
       "block.starcraftvalley.grapes_s_4": "(Trellis) Grapes",
@@ -799,9 +1172,15 @@
       "block.starcraftvalley.tea_s_2": "Tea Plant",
       "block.starcraftvalley.tea_s_3": "Tea Plant",
       "block.starcraftvalley.tea_s_4": "Tea Plant",
+      "item.starcraftvalley.tea": "Tea",
+      "item.starcraftvalley.coffee_bean": "Coffee Bean",
+      "block.starcraftvalley.coffee_s_1": "Coffee Tree",
       "item.starcraftvalley.potato_seeds": "Potato Seeds",
+      "block.starcraftvalley.coffee_s_2": "Coffee Tree",
+      "block.starcraftvalley.coffee_s_3": "Coffee Tree",
       "block.starcraftvalley.cauliflower_s_1": "Cauliflower",
       "item.starcraftvalley.strawberry_seeds": "Strawberry Seeds",
+      "block.starcraftvalley.coffee_s_4": "Coffee Tree",
       "block.starcraftvalley.cauliflower_s_2": "Cauliflower",
       "block.starcraftvalley.cauliflower_s_3": "Cauliflower",
       "item.starcraftvalley.strawberry": "Strawberry",
@@ -810,11 +1189,15 @@
       "item.starcraftvalley.cauliflower_seeds": "Cauliflower Seeds",
       "block.starcraftvalley.wet_earth": "Tilled Earth",
       "item.starcraftvalley.cauliflower": "Cauliflower",
+      "item.starcraftvalley.tea_seeds": "Tea Sapling",
+      "item.starcraftvalley.pepper": "Pepper",
       "block.starcraftvalley.strawberry_s_1": "Strawberry Bush",
       "block.starcraftvalley.strawberry_s_4": "Strawberry Bush",
       "block.starcraftvalley.pepper_s_3": "Pepper",
+      "item.starcraftvalley.grape_seeds": "Grape Seeds",
       "block.starcraftvalley.strawberry_s_2": "Strawberry Bush",
       "block.starcraftvalley.strawberry_s_3": "Strawberry Bush",
+      "item.starcraftvalley.grapes": "Grapes",
       "block.starcraftvalley.tilled_earth": "Tilled Earth",
       "block.starcraftvalley.pepper_s_1": "Pepper",
       "block.starcraftvalley.pepper_s_2": "Pepper",
@@ -887,8 +1270,17 @@
             "children": []
           },
           {
-            "name": "Tea",
-            "children": []
+            "name": "Other",
+            "children": [
+              {
+                "name": "Coffee",
+                "children": []
+              },
+              {
+                "name": "Tea",
+                "children": []
+              }
+            ]
           }
         ]
       }

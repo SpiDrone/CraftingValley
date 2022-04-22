@@ -9,6 +9,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
+import net.mcreator.starcraftvalley.block.TilledEarthBlock;
 import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
 import net.mcreator.starcraftvalley.StarcraftvalleyMod;
 
@@ -79,7 +80,8 @@ public class CropDecayProcedure {
 				}
 			}
 		}
-		if (world.getWorldInfo().isRaining() && world.canBlockSeeSky(new BlockPos(x, y, z))) {
+		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == TilledEarthBlock.block && world.getWorldInfo().isRaining()
+				&& world.canBlockSeeSky(new BlockPos(x, y, z))) {
 			{
 				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = WetEarthBlock.block.getDefaultState();

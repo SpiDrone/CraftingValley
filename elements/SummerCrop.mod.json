@@ -13,6 +13,18 @@
       },
       {
         "value": "CUSTOM:PepperS3"
+      },
+      {
+        "value": "CUSTOM:CoffeeS1"
+      },
+      {
+        "value": "CUSTOM:CoffeeS2"
+      },
+      {
+        "value": "CUSTOM:CoffeeS3"
+      },
+      {
+        "value": "CUSTOM:CoffeeS4"
       }
     ],
     "functions": [],

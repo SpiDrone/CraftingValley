@@ -12,6 +12,7 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Hand;
@@ -22,7 +23,6 @@ import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
-import net.minecraft.fluid.FluidState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -36,6 +36,8 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.HarvestCauliflowerProcedure;
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
+import net.mcreator.starcraftvalley.item.CauliflowerSeedsItem;
+import net.mcreator.starcraftvalley.item.CauliflowerItem;
 import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
 
 import java.util.stream.Stream;
@@ -99,6 +101,11 @@ public class CauliflowerS4Block extends StarcraftvalleyModElements.ModElement {
 		}
 
 		@Override
+		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
+			return new ItemStack(CauliflowerSeedsItem.block);
+		}
+
+		@Override
 		public MaterialColor getMaterialColor() {
 			return MaterialColor.LIME;
 		}
@@ -118,7 +125,7 @@ public class CauliflowerS4Block extends StarcraftvalleyModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 0));
+			return Collections.singletonList(new ItemStack(CauliflowerItem.block, (int) (0)));
 		}
 
 		@Override
@@ -148,20 +155,6 @@ public class CauliflowerS4Block extends StarcraftvalleyModElements.ModElement {
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-
-		@Override
-		public boolean removedByPlayer(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, FluidState fluid) {
-			boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-
-			HarvestCauliflowerProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-			return retval;
 		}
 
 		@Override

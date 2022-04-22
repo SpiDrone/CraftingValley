@@ -14,7 +14,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "tallpotato1",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -63,7 +63,7 @@
     },
     "colorOnMap": "LIME",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:PotatoSeeds"
     },
     "offsetType": "XZ",
     "aiPathNodeType": "WALKABLE",

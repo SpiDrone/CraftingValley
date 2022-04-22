@@ -43,7 +43,7 @@
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:Tea"
     },
     "dropAmount": 0,
     "useLootTableForDrops": false,
@@ -63,7 +63,7 @@
     },
     "colorOnMap": "LIME",
     "creativePickItem": {
-      "value": "CUSTOM:StrawberrySeeds"
+      "value": "CUSTOM:TeaSeeds"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "WALKABLE",
@@ -121,6 +121,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "HarvestTea"
+    },
     "onBlockAdded": {
       "name": "BreakCheck"
     },

@@ -2,7 +2,7 @@
   "parent": "starcraftvalley:custom/24tallcross",
   "textures": {
     "all": "starcraftvalley:blocks/potato1",
-    "particle": "starcraftvalley:blocks/potato1",
+    "particle": "starcraftvalley:blocks/tallpotato1",
     "0": "starcraftvalley:blocks/tallpotato1"
   }
 }

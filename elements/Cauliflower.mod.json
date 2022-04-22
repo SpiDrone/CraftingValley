@@ -7,9 +7,7 @@
     "customModelName": "Normal",
     "name": "Cauliflower",
     "rarity": "COMMON",
-    "specialInfo": [
-      "replacethischunk"
-    ],
+    "specialInfo": [],
     "creativeTab": {
       "value": "FOOD"
     },
