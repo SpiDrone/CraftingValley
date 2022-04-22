@@ -1,0 +1,28 @@
+{
+  "_fv": 27,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "cauliflower",
+    "customModelName": "Normal",
+    "name": "Cauliflower",
+    "rarity": "COMMON",
+    "specialInfo": [
+      "replacethischunk"
+    ],
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 3,
+    "saturation": 0.3,
+    "eatingSpeed": 25,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": false
+  }
+}

@@ -8,8 +8,8 @@
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 13,
-    "customModelName": "Crop model",
+    "renderType": 2,
+    "customModelName": "24tallcross:potato2",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -23,12 +23,12 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 2.0,
+        "mx": 3.0,
         "my": 0.0,
-        "mz": 2.0,
-        "Mx": 14.0,
+        "mz": 3.0,
+        "Mx": 13.0,
         "My": 6.0,
-        "Mz": 14.0,
+        "Mz": 13.0,
         "subtract": false
       }
     ],
@@ -65,7 +65,7 @@
     "creativePickItem": {
       "value": ""
     },
-    "offsetType": "NONE",
+    "offsetType": "XZ",
     "aiPathNodeType": "WALKABLE",
     "flammability": 4,
     "fireSpreadSpeed": 0,

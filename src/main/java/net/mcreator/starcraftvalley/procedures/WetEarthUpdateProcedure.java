@@ -15,6 +15,9 @@ import net.mcreator.starcraftvalley.block.StrawberryS3Block;
 import net.mcreator.starcraftvalley.block.StrawberryS2Block;
 import net.mcreator.starcraftvalley.block.PotatoS3Block;
 import net.mcreator.starcraftvalley.block.PotatoS2Block;
+import net.mcreator.starcraftvalley.block.CauliflowerS4Block;
+import net.mcreator.starcraftvalley.block.CauliflowerS3Block;
+import net.mcreator.starcraftvalley.block.CauliflowerS2Block;
 import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
 import net.mcreator.starcraftvalley.StarcraftvalleyMod;
 
@@ -290,6 +293,127 @@ public class WetEarthUpdateProcedure {
 								{
 									BlockPos _bp = new BlockPos(x, y + 1, z);
 									BlockState _bs = PotatoS3Block.block.getDefaultState();
+									BlockState _bso = world.getBlockState(_bp);
+									TileEntity _te = world.getTileEntity(_bp);
+									CompoundNBT _bnbt = null;
+									if (_te != null) {
+										_bnbt = _te.write(new CompoundNBT());
+										_te.remove();
+									}
+									world.setBlockState(_bp, _bs, 3);
+									if (_bnbt != null) {
+										_te = world.getTileEntity(_bp);
+										if (_te != null) {
+											try {
+												_te.read(_bso, _bnbt);
+											} catch (Exception ignored) {
+											}
+										}
+									}
+								}
+							}
+						}
+					} else if ((new Object() {
+						public String getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getString(tag);
+							return "";
+						}
+					}.getValue(world, new BlockPos(x, y + 1, z), "crop")).equals("cauliflower")) {
+						if (new Object() {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") < 12) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos(x, y + 1, z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("growthStage", (new Object() {
+										public double getValue(IWorld world, BlockPos pos, String tag) {
+											TileEntity tileEntity = world.getTileEntity(pos);
+											if (tileEntity != null)
+												return tileEntity.getTileData().getDouble(tag);
+											return -1;
+										}
+									}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") + 1));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+							if (new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") == 4) {
+								{
+									BlockPos _bp = new BlockPos(x, y + 1, z);
+									BlockState _bs = CauliflowerS2Block.block.getDefaultState();
+									BlockState _bso = world.getBlockState(_bp);
+									TileEntity _te = world.getTileEntity(_bp);
+									CompoundNBT _bnbt = null;
+									if (_te != null) {
+										_bnbt = _te.write(new CompoundNBT());
+										_te.remove();
+									}
+									world.setBlockState(_bp, _bs, 3);
+									if (_bnbt != null) {
+										_te = world.getTileEntity(_bp);
+										if (_te != null) {
+											try {
+												_te.read(_bso, _bnbt);
+											} catch (Exception ignored) {
+											}
+										}
+									}
+								}
+							} else if (new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") == 8) {
+								{
+									BlockPos _bp = new BlockPos(x, y + 1, z);
+									BlockState _bs = CauliflowerS3Block.block.getDefaultState();
+									BlockState _bso = world.getBlockState(_bp);
+									TileEntity _te = world.getTileEntity(_bp);
+									CompoundNBT _bnbt = null;
+									if (_te != null) {
+										_bnbt = _te.write(new CompoundNBT());
+										_te.remove();
+									}
+									world.setBlockState(_bp, _bs, 3);
+									if (_bnbt != null) {
+										_te = world.getTileEntity(_bp);
+										if (_te != null) {
+											try {
+												_te.read(_bso, _bnbt);
+											} catch (Exception ignored) {
+											}
+										}
+									}
+								}
+							} else if (new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") == 12) {
+								{
+									BlockPos _bp = new BlockPos(x, y + 1, z);
+									BlockState _bs = CauliflowerS4Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									TileEntity _te = world.getTileEntity(_bp);
 									CompoundNBT _bnbt = null;

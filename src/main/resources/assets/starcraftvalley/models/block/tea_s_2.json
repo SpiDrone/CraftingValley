@@ -1,0 +1,8 @@
+{
+  "parent": "starcraftvalley:custom/24tallcross",
+  "textures": {
+    "all": "starcraftvalley:blocks/ctea2",
+    "particle": "starcraftvalley:blocks/ctea2",
+    "0": "starcraftvalley:blocks/ctea2"
+  }
+}

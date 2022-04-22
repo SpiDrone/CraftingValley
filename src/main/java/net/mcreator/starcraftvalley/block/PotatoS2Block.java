@@ -80,7 +80,7 @@ public class PotatoS2Block extends StarcraftvalleyModElements.ModElement {
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(2, 0, 2, 14, 6, 14)
+			return VoxelShapes.or(makeCuboidShape(3, 0, 3, 13, 6, 13)
 
 			)
 
@@ -100,6 +100,11 @@ public class PotatoS2Block extends StarcraftvalleyModElements.ModElement {
 		@Override
 		public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, MobEntity entity) {
 			return PathNodeType.WALKABLE;
+		}
+
+		@Override
+		public Block.OffsetType getOffsetType() {
+			return Block.OffsetType.XZ;
 		}
 
 		@Override

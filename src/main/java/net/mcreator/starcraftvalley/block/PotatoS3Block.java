@@ -109,6 +109,11 @@ public class PotatoS3Block extends StarcraftvalleyModElements.ModElement {
 		}
 
 		@Override
+		public Block.OffsetType getOffsetType() {
+			return Block.OffsetType.XZ;
+		}
+
+		@Override
 		public PushReaction getPushReaction(BlockState state) {
 			return PushReaction.DESTROY;
 		}
