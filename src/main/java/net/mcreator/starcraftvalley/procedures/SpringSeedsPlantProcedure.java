@@ -16,11 +16,13 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.item.StrawberrySeedsItem;
 import net.mcreator.starcraftvalley.item.PotatoSeedsItem;
+import net.mcreator.starcraftvalley.item.ParsnipSeedsItem;
 import net.mcreator.starcraftvalley.item.CauliflowerSeedsItem;
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
 import net.mcreator.starcraftvalley.block.StrawberryS1Block;
 import net.mcreator.starcraftvalley.block.PotatoS1Block;
+import net.mcreator.starcraftvalley.block.ParsnipS1Block;
 import net.mcreator.starcraftvalley.block.CauliflowerS1Block;
 import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
 import net.mcreator.starcraftvalley.StarcraftvalleyMod;
@@ -102,6 +104,17 @@ public class SpringSeedsPlantProcedure {
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putString("crop", "cauliflower");
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+			} else if (ParsnipSeedsItem.block == itemstack.getItem()) {
+				world.setBlockState(new BlockPos(x, y + 1, z), ParsnipS1Block.block.getDefaultState(), 3);
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos(x, y + 1, z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putString("crop", "parsnip");
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}

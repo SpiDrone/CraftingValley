@@ -5,42 +5,6 @@
         "0": "tallpotato1"
       },
       "name": "default"
-    },
-    "potato2": {
-      "map": {
-        "0": "tallpotato2"
-      },
-      "name": "potato2"
-    },
-    "potato3": {
-      "map": {
-        "0": "tallpotato3"
-      },
-      "name": "potato3"
-    },
-    "tea1": {
-      "map": {
-        "0": "ctea1"
-      },
-      "name": "tea1"
-    },
-    "tea2": {
-      "map": {
-        "0": "ctea2"
-      },
-      "name": "tea2"
-    },
-    "tea3": {
-      "map": {
-        "0": "ctea3"
-      },
-      "name": "tea3"
-    },
-    "tea4": {
-      "map": {
-        "0": "ctea4"
-      },
-      "name": "tea4"
     }
   }
 }

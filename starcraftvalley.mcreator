@@ -1130,6 +1130,102 @@
         ]
       },
       "path": "~/Crops/Summer/Pepper"
+    },
+    {
+      "name": "HarvestParsnip",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harvest_parsnip",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Spring/Parsnip"
+    },
+    {
+      "name": "Parsnip",
+      "type": "food",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parsnip",
+      "path": "~/Crops/Spring/Parsnip"
+    },
+    {
+      "name": "S",
+      "type": "block",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s",
+      "path": "~/Crops/Spring"
+    },
+    {
+      "name": "ParsnipS1",
+      "type": "block",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parsnip_s_1",
+      "path": "~/Crops/Spring/Parsnip"
+    },
+    {
+      "name": "ParsnipSeeds",
+      "type": "item",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parsnip_seeds",
+      "path": "~/Crops/Seeds"
+    },
+    {
+      "name": "ParsnipS2",
+      "type": "block",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parsnip_s_2",
+      "path": "~/Crops/Spring/Parsnip"
+    },
+    {
+      "name": "ParsnipS3",
+      "type": "block",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parsnip_s_3",
+      "path": "~/Crops/Spring/Parsnip"
+    },
+    {
+      "name": "ParsnipS4",
+      "type": "block",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parsnip_s_4",
+      "path": "~/Crops/Spring/Parsnip"
     }
   ],
   "variable_elements": [
@@ -1161,47 +1257,54 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.starcraftvalley.grapes_s_2": "(Trellis) Grapes",
       "item.starcraftvalley.pepper_seeds": "Pepper Seeds",
-      "block.starcraftvalley.grapes_s_1": "(Trellis) Grapes",
       "block.starcraftvalley.potato_s_2": "Potato Stalk",
-      "block.starcraftvalley.grapes_s_4": "(Trellis) Grapes",
-      "block.starcraftvalley.grapes_s_3": "(Trellis) Grapes",
       "block.starcraftvalley.potato_s_3": "Potato Stalk",
       "block.starcraftvalley.tea_s_1": "Tea Plant",
       "block.starcraftvalley.tea_s_2": "Tea Plant",
       "block.starcraftvalley.tea_s_3": "Tea Plant",
       "block.starcraftvalley.tea_s_4": "Tea Plant",
       "item.starcraftvalley.tea": "Tea",
+      "item.starcraftvalley.parsnip": "Parsnip",
+      "block.starcraftvalley.cauliflower_s_1": "Cauliflower",
+      "block.starcraftvalley.cauliflower_s_2": "Cauliflower",
+      "item.starcraftvalley.strawberry": "Strawberry",
+      "block.starcraftvalley.cauliflower_s_3": "Cauliflower",
+      "block.starcraftvalley.cauliflower_s_4": "Cauliflower",
+      "block.starcraftvalley.potato_s_1": "Potato Stalk",
+      "item.starcraftvalley.cauliflower_seeds": "Cauliflower Seeds",
+      "block.starcraftvalley.s": "Parsnip",
+      "block.starcraftvalley.wet_earth": "Tilled Earth",
+      "item.starcraftvalley.tea_seeds": "Tea Sapling",
+      "item.starcraftvalley.parsnip_seeds": "Parsnip Seeds",
+      "block.starcraftvalley.pepper_s_3": "Pepper",
+      "item.starcraftvalley.grape_seeds": "Grape Seeds",
+      "item.starcraftvalley.grapes": "Grapes",
+      "block.starcraftvalley.pepper_s_1": "Pepper",
+      "block.starcraftvalley.pepper_s_2": "Pepper",
+      "item.starcraftvalley.watering_can": "Watering Can (default)",
+      "block.starcraftvalley.grapes_s_2": "(Trellis) Grapes",
+      "block.starcraftvalley.grapes_s_1": "(Trellis) Grapes",
+      "block.starcraftvalley.grapes_s_4": "(Trellis) Grapes",
+      "block.starcraftvalley.parsnip_s_1": "Parsnip",
+      "block.starcraftvalley.grapes_s_3": "(Trellis) Grapes",
+      "block.starcraftvalley.parsnip_s_3": "Parsnip",
+      "block.starcraftvalley.parsnip_s_2": "Parsnip",
+      "block.starcraftvalley.parsnip_s_4": "Parsnip",
       "item.starcraftvalley.coffee_bean": "Coffee Bean",
       "block.starcraftvalley.coffee_s_1": "Coffee Tree",
       "item.starcraftvalley.potato_seeds": "Potato Seeds",
       "block.starcraftvalley.coffee_s_2": "Coffee Tree",
       "block.starcraftvalley.coffee_s_3": "Coffee Tree",
-      "block.starcraftvalley.cauliflower_s_1": "Cauliflower",
       "item.starcraftvalley.strawberry_seeds": "Strawberry Seeds",
       "block.starcraftvalley.coffee_s_4": "Coffee Tree",
-      "block.starcraftvalley.cauliflower_s_2": "Cauliflower",
-      "block.starcraftvalley.cauliflower_s_3": "Cauliflower",
-      "item.starcraftvalley.strawberry": "Strawberry",
-      "block.starcraftvalley.cauliflower_s_4": "Cauliflower",
-      "block.starcraftvalley.potato_s_1": "Potato Stalk",
-      "item.starcraftvalley.cauliflower_seeds": "Cauliflower Seeds",
-      "block.starcraftvalley.wet_earth": "Tilled Earth",
       "item.starcraftvalley.cauliflower": "Cauliflower",
-      "item.starcraftvalley.tea_seeds": "Tea Sapling",
       "item.starcraftvalley.pepper": "Pepper",
       "block.starcraftvalley.strawberry_s_1": "Strawberry Bush",
       "block.starcraftvalley.strawberry_s_4": "Strawberry Bush",
-      "block.starcraftvalley.pepper_s_3": "Pepper",
-      "item.starcraftvalley.grape_seeds": "Grape Seeds",
       "block.starcraftvalley.strawberry_s_2": "Strawberry Bush",
       "block.starcraftvalley.strawberry_s_3": "Strawberry Bush",
-      "item.starcraftvalley.grapes": "Grapes",
-      "block.starcraftvalley.tilled_earth": "Tilled Earth",
-      "block.starcraftvalley.pepper_s_1": "Pepper",
-      "block.starcraftvalley.pepper_s_2": "Pepper",
-      "item.starcraftvalley.watering_can": "Watering Can (default)"
+      "block.starcraftvalley.tilled_earth": "Tilled Earth"
     }
   },
   "foldersRoot": {
@@ -1239,6 +1342,10 @@
               },
               {
                 "name": "Cauliflower",
+                "children": []
+              },
+              {
+                "name": "Parsnip",
                 "children": []
               }
             ]

@@ -1,0 +1,70 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "potato1"
+      },
+      "name": "default"
+    },
+    "potato2": {
+      "map": {
+        "0": "potato2"
+      },
+      "name": "potato2"
+    },
+    "potato3": {
+      "map": {
+        "0": "potato3"
+      },
+      "name": "potato3"
+    },
+    "parsnip1": {
+      "map": {
+        "0": "parsnip1"
+      },
+      "name": "parsnip1"
+    },
+    "parsnip2": {
+      "map": {
+        "0": "parsnip2"
+      },
+      "name": "parsnip2"
+    },
+    "parsnip3": {
+      "map": {
+        "0": "parsnip3"
+      },
+      "name": "parsnip3"
+    },
+    "parsnip4": {
+      "map": {
+        "0": "parsnip4"
+      },
+      "name": "parsnip4"
+    },
+    "tea1": {
+      "map": {
+        "0": "tea1"
+      },
+      "name": "tea1"
+    },
+    "tea2": {
+      "map": {
+        "0": "tea2"
+      },
+      "name": "tea2"
+    },
+    "tea3": {
+      "map": {
+        "0": "tea3"
+      },
+      "name": "tea3"
+    },
+    "tea4": {
+      "map": {
+        "0": "tea4"
+      },
+      "name": "tea4"
+    }
+  }
+}

@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "24tallcross:default",
+    "customModelName": "cross:default",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,

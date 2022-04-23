@@ -1,0 +1,8 @@
+{
+  "parent": "starcraftvalley:custom/cross",
+  "textures": {
+    "all": "starcraftvalley:blocks/parsnip1",
+    "particle": "starcraftvalley:blocks/parsnip1",
+    "0": "starcraftvalley:blocks/parsnip1"
+  }
+}
