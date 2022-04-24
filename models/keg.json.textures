@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "keg"
+      },
+      "name": "default"
+    },
+    "keg_animated": {
+      "map": {
+        "0": "keg_animated"
+      },
+      "name": "keg_animated"
+    },
+    "keg_animated_2": {
+      "map": {
+        "0": "keg_animated_2"
+      },
+      "name": "keg_animated_2"
+    }
+  }
+}

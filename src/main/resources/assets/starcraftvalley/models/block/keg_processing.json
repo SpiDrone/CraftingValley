@@ -1,0 +1,8 @@
+{
+  "parent": "starcraftvalley:custom/keg",
+  "textures": {
+    "all": "starcraftvalley:blocks/keg_animated_2",
+    "particle": "starcraftvalley:blocks/keg_animated_2",
+    "0": "starcraftvalley:blocks/keg_animated_2"
+  }
+}

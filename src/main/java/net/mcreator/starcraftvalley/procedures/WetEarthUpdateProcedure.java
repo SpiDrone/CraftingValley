@@ -128,7 +128,7 @@ public class WetEarthUpdateProcedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") < 8) {
+					}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") < 9) {
 						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos(x, y + 1, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -341,7 +341,7 @@ public class WetEarthUpdateProcedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") < 12) {
+					}.getValue(world, new BlockPos(x, y + 1, z), "growthStage") < 13) {
 						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos(x, y + 1, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);

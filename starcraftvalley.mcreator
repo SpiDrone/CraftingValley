@@ -1226,6 +1226,284 @@
       "locked_code": false,
       "registry_name": "parsnip_s_4",
       "path": "~/Crops/Spring/Parsnip"
+    },
+    {
+      "name": "Hamsters",
+      "type": "block",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hamsters",
+      "path": "~/Crops/Spring"
+    },
+    {
+      "name": "Playertick",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playertick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crops/Spring"
+    },
+    {
+      "name": "HamstersBlockAdded",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hamsters_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Spring"
+    },
+    {
+      "name": "HamstersOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hamsters_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crops/Spring"
+    },
+    {
+      "name": "Keg",
+      "type": "block",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keg",
+      "path": "~/Processing"
+    },
+    {
+      "name": "Kegfull",
+      "type": "block",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kegfull",
+      "path": "~/Processing"
+    },
+    {
+      "name": "KegProcessing",
+      "type": "block",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keg_processing",
+      "path": "~/Processing"
+    },
+    {
+      "name": "KegCrop",
+      "type": "tag",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keg_crop",
+      "path": "~/Tags"
+    },
+    {
+      "name": "FillKeg",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fill_keg",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Processing"
+    },
+    {
+      "name": "CoffeeFoodEaten",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coffee_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/FoodItems"
+    },
+    {
+      "name": "Coffee",
+      "type": "food",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coffee",
+      "path": "~/FoodItems"
+    },
+    {
+      "name": "KegUpdate",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keg_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Processing"
+    },
+    {
+      "name": "KegHarvest",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keg_harvest",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Processing"
+    },
+    {
+      "name": "KegHarvestBreak",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keg_harvest_break",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Processing"
     }
   ],
   "variable_elements": [
@@ -1251,6 +1529,24 @@
       "name": "TotalDays",
       "type": "number",
       "scope": "map",
+      "value": "0.0"
+    },
+    {
+      "name": "Coins",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "500.0"
+    },
+    {
+      "name": "FarmingLvl",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "FarmingXp",
+      "type": "number",
+      "scope": "player_persistent",
       "value": "0"
     }
   ],
@@ -1268,6 +1564,7 @@
       "item.starcraftvalley.parsnip": "Parsnip",
       "block.starcraftvalley.cauliflower_s_1": "Cauliflower",
       "block.starcraftvalley.cauliflower_s_2": "Cauliflower",
+      "block.starcraftvalley.keg_processing": "Keg",
       "item.starcraftvalley.strawberry": "Strawberry",
       "block.starcraftvalley.cauliflower_s_3": "Cauliflower",
       "block.starcraftvalley.cauliflower_s_4": "Cauliflower",
@@ -1291,6 +1588,7 @@
       "block.starcraftvalley.parsnip_s_3": "Parsnip",
       "block.starcraftvalley.parsnip_s_2": "Parsnip",
       "block.starcraftvalley.parsnip_s_4": "Parsnip",
+      "item.starcraftvalley.coffee": "Coffee",
       "item.starcraftvalley.coffee_bean": "Coffee Bean",
       "block.starcraftvalley.coffee_s_1": "Coffee Tree",
       "item.starcraftvalley.potato_seeds": "Potato Seeds",
@@ -1298,7 +1596,10 @@
       "block.starcraftvalley.coffee_s_3": "Coffee Tree",
       "item.starcraftvalley.strawberry_seeds": "Strawberry Seeds",
       "block.starcraftvalley.coffee_s_4": "Coffee Tree",
+      "block.starcraftvalley.hamsters": "Hamsters",
+      "block.starcraftvalley.kegfull": "Keg",
       "item.starcraftvalley.cauliflower": "Cauliflower",
+      "block.starcraftvalley.keg": "Keg",
       "item.starcraftvalley.pepper": "Pepper",
       "block.starcraftvalley.strawberry_s_1": "Strawberry Bush",
       "block.starcraftvalley.strawberry_s_4": "Strawberry Bush",
@@ -1390,6 +1691,14 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Processing",
+        "children": []
+      },
+      {
+        "name": "FoodItems",
+        "children": []
       }
     ]
   },

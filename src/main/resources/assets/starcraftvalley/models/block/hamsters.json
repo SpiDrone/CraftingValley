@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "starcraftvalley:blocks/trellis",
+    "particle": "starcraftvalley:blocks/trellis"
+  }
+}

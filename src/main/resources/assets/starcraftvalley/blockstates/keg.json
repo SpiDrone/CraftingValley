@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "starcraftvalley:block/keg"
+    },
+    "facing=east": {
+      "model": "starcraftvalley:block/keg",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "starcraftvalley:block/keg",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "starcraftvalley:block/keg",
+      "y": 270
+    }
+  }
+}

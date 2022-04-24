@@ -1,0 +1,29 @@
+{
+  "_fv": 27,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "cup_coffee",
+    "customModelName": "Normal",
+    "name": "Coffee",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 32,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatingSpeed": 20,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "CoffeeFoodEaten"
+    }
+  }
+}

@@ -106,7 +106,7 @@ public class StarAdminPProcedure {
 				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager()
 							.handleCommand(new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(), "time set 0d");
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(), "time set 1d");
 				}
 				StarcraftvalleyModVariables.MapVariables.get(world).TotalDays = 1;
 				StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
