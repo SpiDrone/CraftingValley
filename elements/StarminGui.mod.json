@@ -1,0 +1,121 @@
+{
+  "_fv": 27,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "0",
+          "width": 20,
+          "height": 20,
+          "name": "year",
+          "x": 230,
+          "y": 40
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "0",
+          "width": 20,
+          "height": 20,
+          "name": "season",
+          "x": 208,
+          "y": 40
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "1",
+          "width": 20,
+          "height": 20,
+          "name": "day",
+          "x": 186,
+          "y": 40
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "D/S/Y",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "D/S/Y",
+          "x": 205,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Set Date",
+          "onClick": {
+            "name": "StarminGuiB1"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "Set Date",
+          "x": 128,
+          "y": 40
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Set Balance",
+          "onClick": {
+            "name": "StarminGuiB2"
+          },
+          "width": 82,
+          "height": 20,
+          "name": "Set Balance",
+          "x": 129,
+          "y": 76
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "10000",
+          "width": 47,
+          "height": 20,
+          "name": "coins",
+          "x": 212,
+          "y": 76
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Display Overlay",
+          "onClick": {
+            "name": "StarminGuiOverlay"
+          },
+          "width": 103,
+          "height": 20,
+          "name": "Display Overlay",
+          "x": 130,
+          "y": 108
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -22,7 +22,8 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "display_day"
+      "registry_name": "display_day",
+      "path": "~/admin"
     },
     {
       "name": "TilledEarth",
@@ -1326,7 +1327,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "keg",
-      "path": "~/Processing"
+      "path": "~/Processing/Keg"
     },
     {
       "name": "Kegfull",
@@ -1335,7 +1336,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "kegfull",
-      "path": "~/Processing"
+      "path": "~/Processing/Keg"
     },
     {
       "name": "KegProcessing",
@@ -1344,7 +1345,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "keg_processing",
-      "path": "~/Processing"
+      "path": "~/Processing/Keg"
     },
     {
       "name": "KegCrop",
@@ -1386,7 +1387,7 @@
           }
         ]
       },
-      "path": "~/Processing"
+      "path": "~/Processing/Keg"
     },
     {
       "name": "CoffeeFoodEaten",
@@ -1441,7 +1442,7 @@
           }
         ]
       },
-      "path": "~/Processing"
+      "path": "~/Processing/Keg"
     },
     {
       "name": "KegHarvest",
@@ -1474,7 +1475,7 @@
           }
         ]
       },
-      "path": "~/Processing"
+      "path": "~/Processing/Keg"
     },
     {
       "name": "KegHarvestBreak",
@@ -1503,7 +1504,105 @@
           }
         ]
       },
-      "path": "~/Processing"
+      "path": "~/Processing/Keg"
+    },
+    {
+      "name": "StarminGui",
+      "type": "gui",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starmin_gui",
+      "path": "~/admin"
+    },
+    {
+      "name": "StarminGuiB1",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starmin_gui_b_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/admin"
+    },
+    {
+      "name": "StarminGuiB2",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starmin_gui_b_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/admin"
+    },
+    {
+      "name": "StarminGuiOverlay",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starmin_gui_overlay",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/admin"
+    },
+    {
+      "name": "DisplayConditions",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_conditions",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/admin"
     }
   ],
   "variable_elements": [
@@ -1548,6 +1647,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "TempOverlay",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -1565,8 +1670,8 @@
       "block.starcraftvalley.cauliflower_s_1": "Cauliflower",
       "block.starcraftvalley.cauliflower_s_2": "Cauliflower",
       "block.starcraftvalley.keg_processing": "Keg",
-      "item.starcraftvalley.strawberry": "Strawberry",
       "block.starcraftvalley.cauliflower_s_3": "Cauliflower",
+      "item.starcraftvalley.strawberry": "Strawberry",
       "block.starcraftvalley.cauliflower_s_4": "Cauliflower",
       "block.starcraftvalley.potato_s_1": "Potato Stalk",
       "item.starcraftvalley.cauliflower_seeds": "Cauliflower Seeds",
@@ -1694,7 +1799,12 @@
       },
       {
         "name": "Processing",
-        "children": []
+        "children": [
+          {
+            "name": "Keg",
+            "children": []
+          }
+        ]
       },
       {
         "name": "FoodItems",

@@ -227,6 +227,7 @@ public class StarcraftvalleyModVariables {
 			nbt.putDouble("Coins", instance.Coins);
 			nbt.putDouble("FarmingLvl", instance.FarmingLvl);
 			nbt.putDouble("FarmingXp", instance.FarmingXp);
+			nbt.putBoolean("TempOverlay", instance.TempOverlay);
 			return nbt;
 		}
 
@@ -236,6 +237,7 @@ public class StarcraftvalleyModVariables {
 			instance.Coins = nbt.getDouble("Coins");
 			instance.FarmingLvl = nbt.getDouble("FarmingLvl");
 			instance.FarmingXp = nbt.getDouble("FarmingXp");
+			instance.TempOverlay = nbt.getBoolean("TempOverlay");
 		}
 	}
 
@@ -243,6 +245,7 @@ public class StarcraftvalleyModVariables {
 		public double Coins = 500.0;
 		public double FarmingLvl = 0;
 		public double FarmingXp = 0;
+		public boolean TempOverlay = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -280,6 +283,7 @@ public class StarcraftvalleyModVariables {
 		clone.Coins = original.Coins;
 		clone.FarmingLvl = original.FarmingLvl;
 		clone.FarmingXp = original.FarmingXp;
+		clone.TempOverlay = original.TempOverlay;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -309,6 +313,7 @@ public class StarcraftvalleyModVariables {
 					variables.Coins = message.data.Coins;
 					variables.FarmingLvl = message.data.FarmingLvl;
 					variables.FarmingXp = message.data.FarmingXp;
+					variables.TempOverlay = message.data.TempOverlay;
 				}
 			});
 			context.setPacketHandled(true);

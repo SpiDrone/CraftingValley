@@ -12,7 +12,13 @@ import net.minecraft.world.World;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.starcraftvalley.procedures.DisplayConditionsProcedure;
 import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
+
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @Mod.EventBusSubscriber
 public class DisplayDayOverlay {
@@ -39,13 +45,18 @@ public class DisplayDayOverlay {
 			double x = _x;
 			double y = _y;
 			double z = _z;
-			if (true) {
+			if (DisplayConditionsProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
-						"D " + (int) (StarcraftvalleyModVariables.MapVariables.get(world).day) + "", posX + -213, posY + -120, -1);
+						"D " + (int) (StarcraftvalleyModVariables.MapVariables.get(world).day) + "", posX + -212, posY + -119, -1);
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
 						"Y: " + (int) (StarcraftvalleyModVariables.MapVariables.get(world).year) + "", posX + -212, posY + -97, -6750208);
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
-						"S " + (int) (StarcraftvalleyModVariables.MapVariables.get(world).season) + "", posX + -213, posY + -109, -1);
+						"S " + (int) (StarcraftvalleyModVariables.MapVariables.get(world).season) + "", posX + -212, posY + -108, -1);
+				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
+						"Coins: " + (int) ((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new StarcraftvalleyModVariables.PlayerVariables())).Coins) + "",
+						posX + -212, posY + -86, -1);
 			}
 		}
 	}

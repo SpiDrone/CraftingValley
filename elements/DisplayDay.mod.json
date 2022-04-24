@@ -13,8 +13,8 @@
             "falpha": 0.0
           },
           "name": "D <VAR:integer:day>",
-          "x": 0,
-          "y": 0
+          "x": 1,
+          "y": 1
         }
       },
       {
@@ -39,13 +39,29 @@
             "falpha": 0.0
           },
           "name": "S <VAR:integer:season>",
-          "x": 0,
-          "y": 11
+          "x": 1,
+          "y": 12
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Coins: <VAR:integer:Coins>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Coins: <VAR:integer:Coins>",
+          "x": 1,
+          "y": 34
         }
       }
     ],
     "baseTexture": "",
     "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "DisplayConditions"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

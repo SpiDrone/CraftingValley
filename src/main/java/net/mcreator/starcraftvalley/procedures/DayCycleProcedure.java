@@ -5,17 +5,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
 
 import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
 import net.mcreator.starcraftvalley.StarcraftvalleyMod;
 
 import java.util.Map;
-import java.util.List;
 import java.util.HashMap;
-import java.util.ArrayList;
 
 public class DayCycleProcedure {
 	@Mod.EventBusSubscriber
@@ -57,17 +52,6 @@ public class DayCycleProcedure {
 			}
 			StarcraftvalleyModVariables.MapVariables.get(world).TotalDays = (StarcraftvalleyModVariables.MapVariables.get(world).TotalDays + 1);
 			StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
-		} else if (StarcraftvalleyModVariables.MapVariables.get(world).TotalDays > world.getWorldInfo().getDayTime() / 24000 + 48000) {
-			{
-				List<? extends PlayerEntity> _players = new ArrayList<>(world.getPlayers());
-				for (Entity entityiterator : _players) {
-					if (entityiterator instanceof PlayerEntity && !entityiterator.world.isRemote()) {
-						((PlayerEntity) entityiterator).sendStatusMessage(new StringTextComponent(
-								"StarCraftValley : You should not be seeing this message.  Somebody has been tampering with Time.  Because of the way Minecrafts /Time command works.  You've just changed the day count, I suggest you starcraft query the totaldays.  and do /time set xd.  With X being the total days."),
-								(false));
-					}
-				}
-			}
 		}
 	}
 }

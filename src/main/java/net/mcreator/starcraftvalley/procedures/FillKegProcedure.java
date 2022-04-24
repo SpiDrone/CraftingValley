@@ -59,8 +59,9 @@ public class FillKegProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		double hand = 0;
 		ItemStack item = ItemStack.EMPTY;
+		double hand = 0;
+		double removeItem = 0;
 		if (ItemTags.getCollection().getTagByID(new ResourceLocation("forge:keg"))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())) {
 			hand = 1;
@@ -71,7 +72,7 @@ public class FillKegProcedure {
 			item = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY);
 		}
 		if (hand != 0) {
-			if ((item).getItem() == CoffeeBeanItem.block) {
+			if ((item).getItem() == CoffeeBeanItem.block && ((item)).getCount() >= 5) {
 				{
 					BlockPos _bp = new BlockPos(x, y, z);
 					BlockState _bs = KegProcessingBlock.block.getDefaultState();
@@ -110,15 +111,16 @@ public class FillKegProcedure {
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
-			}
-			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos(x, y, z);
-				TileEntity _tileEntity = world.getTileEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_tileEntity != null)
-					_tileEntity.getTileData().putDouble("dayFilled", StarcraftvalleyModVariables.MapVariables.get(world).TotalDays);
-				if (world instanceof World)
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos(x, y, z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("dayFilled", StarcraftvalleyModVariables.MapVariables.get(world).TotalDays);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				removeItem = 5;
 			}
 			if (!(new Object() {
 				public boolean checkGamemode(Entity _ent) {
@@ -133,9 +135,9 @@ public class FillKegProcedure {
 				}
 			}.checkGamemode(entity))) {
 				if (hand == 1) {
-					(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+					(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) removeItem);
 				} else {
-					(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)).shrink((int) 1);
+					(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)).shrink((int) removeItem);
 				}
 			}
 		}
