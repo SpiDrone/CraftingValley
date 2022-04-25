@@ -1,0 +1,44 @@
+{
+  "_fv": 27,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Strawberry"
+      },
+      {
+        "value": "CUSTOM:Cauliflower"
+      },
+      {
+        "value": "CUSTOM:CoffeeBean"
+      },
+      {
+        "value": "CUSTOM:Pepper"
+      },
+      {
+        "value": "CUSTOM:Grapes"
+      },
+      {
+        "value": "CUSTOM:Parsnip"
+      },
+      {
+        "value": "CUSTOM:Coffee"
+      },
+      {
+        "value": "CUSTOM:TeaLeaves"
+      },
+      {
+        "value": "CUSTOM:Tea"
+      },
+      {
+        "value": "CUSTOM:CabbageRed"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "sellable",
+    "namespace": "forge"
+  }
+}

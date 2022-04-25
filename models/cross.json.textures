@@ -65,6 +65,36 @@
         "0": "tea4"
       },
       "name": "tea4"
+    },
+    "cabr1": {
+      "map": {
+        "0": "cabbage_red1"
+      },
+      "name": "cabr1"
+    },
+    "cabr2": {
+      "map": {
+        "0": "cabbage_red2"
+      },
+      "name": "cabr2"
+    },
+    "cabr3": {
+      "map": {
+        "0": "cabbage_red3"
+      },
+      "name": "cabr3"
+    },
+    "cabr4": {
+      "map": {
+        "0": "cabbage_red4"
+      },
+      "name": "cabr4"
+    },
+    "cabr5": {
+      "map": {
+        "0": "cabbage_red5"
+      },
+      "name": "cabr5"
     }
   }
 }

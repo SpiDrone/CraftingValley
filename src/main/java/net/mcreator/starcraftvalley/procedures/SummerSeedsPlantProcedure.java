@@ -15,9 +15,11 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.item.PepperSeedsItem;
+import net.mcreator.starcraftvalley.item.CabbageRedSeedsItem;
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
 import net.mcreator.starcraftvalley.block.PepperS1Block;
+import net.mcreator.starcraftvalley.block.CabbageRedS1Block;
 import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
 import net.mcreator.starcraftvalley.StarcraftvalleyMod;
 
@@ -76,6 +78,17 @@ public class SummerSeedsPlantProcedure {
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putString("crop", "pepper");
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+			} else if (CabbageRedSeedsItem.block == itemstack.getItem()) {
+				world.setBlockState(new BlockPos(x, y + 1, z), CabbageRedS1Block.block.getDefaultState(), 3);
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos(x, y + 1, z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putString("crop", "cabbagered");
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}

@@ -1,0 +1,26 @@
+{
+  "_fv": 27,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "red_cabbage",
+    "customModelName": "Normal",
+    "name": "Red Cabbage",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Tabcrops"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 1,
+    "saturation": 0.3,
+    "eatingSpeed": 25,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": false
+  }
+}

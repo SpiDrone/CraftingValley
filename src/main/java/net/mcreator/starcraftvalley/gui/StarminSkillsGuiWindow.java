@@ -92,7 +92,7 @@ public class StarminSkillsGuiWindow extends ContainerScreen<StarminSkillsGui.Gui
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Farming", 2, 9, -13395712);
+		this.font.drawString(ms, "Farming", 96, 25, -13395712);
 	}
 
 	@Override
@@ -105,7 +105,13 @@ public class StarminSkillsGuiWindow extends ContainerScreen<StarminSkillsGui.Gui
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		fl = new TextFieldWidget(this.font, this.guiLeft + 40, this.guiTop + 5, 19, 20, new StringTextComponent("lvl")) {
+		this.addButton(new Button(this.guiLeft + 5, this.guiTop + 4, 37, 20, new StringTextComponent("[ O ]"), e -> {
+			if (true) {
+				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminSkillsGui.ButtonPressedMessage(0, x, y, z));
+				StarminSkillsGui.handleButtonAction(entity, 0, x, y, z);
+			}
+		}));
+		fl = new TextFieldWidget(this.font, this.guiLeft + 59, this.guiTop + 4, 31, 20, new StringTextComponent("lvl")) {
 			{
 				setSuggestion("lvl");
 			}
@@ -131,16 +137,16 @@ public class StarminSkillsGuiWindow extends ContainerScreen<StarminSkillsGui.Gui
 		guistate.put("text:fl", fl);
 		fl.setMaxStringLength(32767);
 		this.children.add(this.fl);
-		fx = new TextFieldWidget(this.font, this.guiLeft + 61, this.guiTop + 5, 19, 20, new StringTextComponent("xp")) {
+		fx = new TextFieldWidget(this.font, this.guiLeft + 97, this.guiTop + 4, 31, 20, new StringTextComponent("Xp")) {
 			{
-				setSuggestion("xp");
+				setSuggestion("Xp");
 			}
 
 			@Override
 			public void writeText(String text) {
 				super.writeText(text);
 				if (getText().isEmpty())
-					setSuggestion("xp");
+					setSuggestion("Xp");
 				else
 					setSuggestion(null);
 			}
@@ -149,7 +155,7 @@ public class StarminSkillsGuiWindow extends ContainerScreen<StarminSkillsGui.Gui
 			public void setCursorPosition(int pos) {
 				super.setCursorPosition(pos);
 				if (getText().isEmpty())
-					setSuggestion("xp");
+					setSuggestion("Xp");
 				else
 					setSuggestion(null);
 			}
@@ -157,16 +163,16 @@ public class StarminSkillsGuiWindow extends ContainerScreen<StarminSkillsGui.Gui
 		guistate.put("text:fx", fx);
 		fx.setMaxStringLength(32767);
 		this.children.add(this.fx);
-		fp = new TextFieldWidget(this.font, this.guiLeft + 82, this.guiTop + 5, 19, 20, new StringTextComponent("Pr.")) {
+		fp = new TextFieldWidget(this.font, this.guiLeft + 135, this.guiTop + 4, 31, 20, new StringTextComponent("Prest.")) {
 			{
-				setSuggestion("Pr.");
+				setSuggestion("Prest.");
 			}
 
 			@Override
 			public void writeText(String text) {
 				super.writeText(text);
 				if (getText().isEmpty())
-					setSuggestion("Pr.");
+					setSuggestion("Prest.");
 				else
 					setSuggestion(null);
 			}
@@ -175,7 +181,7 @@ public class StarminSkillsGuiWindow extends ContainerScreen<StarminSkillsGui.Gui
 			public void setCursorPosition(int pos) {
 				super.setCursorPosition(pos);
 				if (getText().isEmpty())
-					setSuggestion("Pr.");
+					setSuggestion("Prest.");
 				else
 					setSuggestion(null);
 			}
@@ -183,11 +189,5 @@ public class StarminSkillsGuiWindow extends ContainerScreen<StarminSkillsGui.Gui
 		guistate.put("text:fp", fp);
 		fp.setMaxStringLength(32767);
 		this.children.add(this.fp);
-		this.addButton(new Button(this.guiLeft + 130, this.guiTop + 5, 37, 20, new StringTextComponent("[ O ]"), e -> {
-			if (true) {
-				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminSkillsGui.ButtonPressedMessage(0, x, y, z));
-				StarminSkillsGui.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
 	}
 }

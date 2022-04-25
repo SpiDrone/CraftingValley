@@ -19,6 +19,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.NonNullList;
@@ -56,6 +57,7 @@ import net.minecraft.block.Block;
 import net.mcreator.starcraftvalley.procedures.HarvestGrapesProcedure;
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.GrapesItem;
+import net.mcreator.starcraftvalley.item.GrapeSeedsItem;
 import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
 
 import javax.annotation.Nullable;
@@ -119,6 +121,11 @@ public class GrapesS4Block extends StarcraftvalleyModElements.ModElement {
 		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 4;
+		}
+
+		@Override
+		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
+			return new ItemStack(GrapeSeedsItem.block);
 		}
 
 		@Override

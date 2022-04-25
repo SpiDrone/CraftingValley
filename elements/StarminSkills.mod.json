@@ -19,41 +19,8 @@
             "falpha": 0.0
           },
           "name": "Farming",
-          "x": 128,
-          "y": 46
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "lvl",
-          "width": 19,
-          "height": 20,
-          "name": "fl",
-          "x": 166,
-          "y": 42
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "xp",
-          "width": 19,
-          "height": 20,
-          "name": "fx",
-          "x": 187,
-          "y": 42
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "Pr.",
-          "width": 19,
-          "height": 20,
-          "name": "fp",
-          "x": 208,
-          "y": 42
+          "x": 222,
+          "y": 62
         }
       },
       {
@@ -66,8 +33,41 @@
           "width": 37,
           "height": 20,
           "name": "[ O ]",
-          "x": 256,
-          "y": 42
+          "x": 131,
+          "y": 41
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "lvl",
+          "width": 31,
+          "height": 20,
+          "name": "fl",
+          "x": 185,
+          "y": 41
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Xp",
+          "width": 31,
+          "height": 20,
+          "name": "fx",
+          "x": 223,
+          "y": 41
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Prest.",
+          "width": 31,
+          "height": 20,
+          "name": "fp",
+          "x": 261,
+          "y": 41
         }
       }
     ],

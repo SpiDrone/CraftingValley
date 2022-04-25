@@ -63,7 +63,7 @@
     },
     "colorOnMap": "LIME",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:GrapeSeeds"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "WALKABLE",

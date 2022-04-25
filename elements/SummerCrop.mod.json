@@ -25,6 +25,33 @@
       },
       {
         "value": "CUSTOM:CoffeeS4"
+      },
+      {
+        "value": "CUSTOM:CabbageRedS1"
+      },
+      {
+        "value": "CUSTOM:CabbageRedS2"
+      },
+      {
+        "value": "CUSTOM:CabbageRedS3"
+      },
+      {
+        "value": "CUSTOM:CabbageRedS4"
+      },
+      {
+        "value": "CUSTOM:CabbageRedS5"
+      },
+      {
+        "value": "CUSTOM:WheatS1"
+      },
+      {
+        "value": "CUSTOM:WheatS2"
+      },
+      {
+        "value": "CUSTOM:WheatS3"
+      },
+      {
+        "value": "CUSTOM:WheatS4"
       }
     ],
     "functions": [],

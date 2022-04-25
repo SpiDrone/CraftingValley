@@ -65,7 +65,7 @@ public class PepperSeedsItem extends StarcraftvalleyModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("[Spring Crop]"));
+			list.add(new StringTextComponent("[Summer Crop]"));
 		}
 
 		@Override
