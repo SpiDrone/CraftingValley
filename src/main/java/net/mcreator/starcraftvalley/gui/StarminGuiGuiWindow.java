@@ -97,7 +97,7 @@ public class StarminGuiGuiWindow extends ContainerScreen<StarminGuiGui.GuiContai
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "D/S/Y", 79, 25, -16777216);
+		this.font.drawString(ms, "D/S/Y", 78, 24, -16777216);
 	}
 
 	@Override
@@ -230,6 +230,18 @@ public class StarminGuiGuiWindow extends ContainerScreen<StarminGuiGui.GuiContai
 			if (true) {
 				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(2, x, y, z));
 				StarminGuiGui.handleButtonAction(entity, 2, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 126, this.guiTop + 3, 22, 20, new StringTextComponent("+1"), e -> {
+			if (true) {
+				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(3, x, y, z));
+				StarminGuiGui.handleButtonAction(entity, 3, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 116, this.guiTop + 143, 56, 20, new StringTextComponent("Skills >"), e -> {
+			if (true) {
+				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(4, x, y, z));
+				StarminGuiGui.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
 	}

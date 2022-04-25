@@ -9,6 +9,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.starcraftvalley.item.ParsnipItem;
+import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
 import net.mcreator.starcraftvalley.StarcraftvalleyMod;
 
 import java.util.Map;
@@ -52,5 +53,15 @@ public class HarvestParsnipProcedure {
 			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 		}
 		world.destroyBlock(new BlockPos(x, y, z), false);
+		{
+			double _setval = Math.ceil(((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingXp + 8)
+					* (1 + (entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingPrestige / 20));
+			entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.FarmingXp = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

@@ -125,7 +125,7 @@ public class StarminGuiB1Procedure {
 		}.getText()) > 3) {
 			season = 3;
 		} else {
-			StarcraftvalleyModVariables.MapVariables.get(world).season = new Object() {
+			season = new Object() {
 				double convert(String s) {
 					try {
 						return Double.parseDouble(s.trim());
@@ -142,7 +142,6 @@ public class StarminGuiB1Procedure {
 					return "";
 				}
 			}.getText());
-			StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
 		}
 		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(

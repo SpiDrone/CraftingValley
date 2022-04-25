@@ -23,7 +23,7 @@ import java.util.AbstractMap;
 @Mod.EventBusSubscriber
 public class DisplayDayOverlay {
 	@OnlyIn(Dist.CLIENT)
-	@SubscribeEvent(priority = EventPriority.NORMAL)
+	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public static void eventHandler(RenderGameOverlayEvent.Post event) {
 		if (event.getType() == RenderGameOverlayEvent.ElementType.HELMET) {
 			int w = event.getWindow().getScaledWidth();
@@ -57,6 +57,15 @@ public class DisplayDayOverlay {
 						"Coins: " + (int) ((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new StarcraftvalleyModVariables.PlayerVariables())).Coins) + "",
 						posX + -212, posY + -86, -1);
+				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
+						"FarmL: "
+								+ (int) ((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingLvl)
+								+ " FarmXp: "
+								+ ((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingXp)
+								+ "",
+						posX + -211, posY + -77, -13369600);
 			}
 		}
 	}

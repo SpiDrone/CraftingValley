@@ -11,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.starcraftvalley.item.TeaItem;
 import net.mcreator.starcraftvalley.item.CoffeeItem;
 import net.mcreator.starcraftvalley.block.KegBlock;
 import net.mcreator.starcraftvalley.StarcraftvalleyMod;
@@ -58,25 +59,38 @@ public class KegHarvestProcedure {
 				return "";
 			}
 		}.getValue(world, new BlockPos(x, y, z), "crop")).equals("coffee")) {
-			{
-				BlockPos _bp = new BlockPos(x, y, z);
-				BlockState _bs = KegBlock.block.getDefaultState();
-				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.get(_property) != null)
-						try {
-							_bs = _bs.with(_property, (Comparable) entry.getValue());
-						} catch (Exception e) {
-						}
-				}
-				world.setBlockState(_bp, _bs, 3);
-			}
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = new ItemStack(CoffeeItem.block);
 				_setstack.setCount((int) 1);
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
+		} else if ((new Object() {
+			public String getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getString(tag);
+				return "";
+			}
+		}.getValue(world, new BlockPos(x, y, z), "crop")).equals("tea")) {
+			if (entity instanceof PlayerEntity) {
+				ItemStack _setstack = new ItemStack(TeaItem.block);
+				_setstack.setCount((int) 1);
+				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+			}
+		}
+		{
+			BlockPos _bp = new BlockPos(x, y, z);
+			BlockState _bs = KegBlock.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_property != null && _bs.get(_property) != null)
+					try {
+						_bs = _bs.with(_property, (Comparable) entry.getValue());
+					} catch (Exception e) {
+					}
+			}
+			world.setBlockState(_bp, _bs, 3);
 		}
 	}
 }

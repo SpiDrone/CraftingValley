@@ -10,12 +10,12 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.procedures.CoffeeSeedsPlantProcedure;
+import net.mcreator.starcraftvalley.itemgroup.TabseedsItemGroup;
 import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
 
 import java.util.stream.Stream;
@@ -39,7 +39,7 @@ public class CoffeeBeanItem extends StarcraftvalleyModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(32).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(TabseedsItemGroup.tab).maxStackSize(32).rarity(Rarity.COMMON));
 			setRegistryName("coffee_bean");
 		}
 

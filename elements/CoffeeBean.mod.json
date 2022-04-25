@@ -8,7 +8,7 @@
     "name": "Coffee Bean",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Tabseeds"
     },
     "stackSize": 32,
     "enchantability": 0,

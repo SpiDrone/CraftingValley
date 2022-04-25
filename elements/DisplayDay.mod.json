@@ -2,7 +2,7 @@
   "_fv": 27,
   "_type": "overlay",
   "definition": {
-    "priority": "NORMAL",
+    "priority": "LOWEST",
     "components": [
       {
         "type": "label",
@@ -54,6 +54,19 @@
           "name": "Coins: <VAR:integer:Coins>",
           "x": 1,
           "y": 34
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "FarmL: <VAR:integer:FarmingLvl> FarmXp: <VAR:FarmingXp>",
+          "color": {
+            "value": -13369600,
+            "falpha": 0.0
+          },
+          "name": "FarmL: <VAR:integer:FarmingLvl> FarmXp: <VAR:FarmingXp>",
+          "x": 2,
+          "y": 43
         }
       }
     ],

@@ -3,6 +3,7 @@ package net.mcreator.starcraftvalley.procedures;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.GameType;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.tileentity.TileEntity;
@@ -19,6 +20,7 @@ import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.starcraftvalley.item.TeaLeavesItem;
 import net.mcreator.starcraftvalley.item.CoffeeBeanItem;
 import net.mcreator.starcraftvalley.block.KegProcessingBlock;
 import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
@@ -72,55 +74,118 @@ public class FillKegProcedure {
 			item = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY);
 		}
 		if (hand != 0) {
-			if ((item).getItem() == CoffeeBeanItem.block && ((item)).getCount() >= 5) {
-				{
-					BlockPos _bp = new BlockPos(x, y, z);
-					BlockState _bs = KegProcessingBlock.block.getDefaultState();
-					BlockState _bso = world.getBlockState(_bp);
-					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-						if (_property != null && _bs.get(_property) != null)
-							try {
-								_bs = _bs.with(_property, (Comparable) entry.getValue());
-							} catch (Exception e) {
-							}
-					}
-					TileEntity _te = world.getTileEntity(_bp);
-					CompoundNBT _bnbt = null;
-					if (_te != null) {
-						_bnbt = _te.write(new CompoundNBT());
-						_te.remove();
-					}
-					world.setBlockState(_bp, _bs, 3);
-					if (_bnbt != null) {
-						_te = world.getTileEntity(_bp);
+			if ((item).getItem() == CoffeeBeanItem.block) {
+				if (((item)).getCount() >= 5) {
+					{
+						BlockPos _bp = new BlockPos(x, y, z);
+						BlockState _bs = KegProcessingBlock.block.getDefaultState();
+						BlockState _bso = world.getBlockState(_bp);
+						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+							if (_property != null && _bs.get(_property) != null)
+								try {
+									_bs = _bs.with(_property, (Comparable) entry.getValue());
+								} catch (Exception e) {
+								}
+						}
+						TileEntity _te = world.getTileEntity(_bp);
+						CompoundNBT _bnbt = null;
 						if (_te != null) {
-							try {
-								_te.read(_bso, _bnbt);
-							} catch (Exception ignored) {
+							_bnbt = _te.write(new CompoundNBT());
+							_te.remove();
+						}
+						world.setBlockState(_bp, _bs, 3);
+						if (_bnbt != null) {
+							_te = world.getTileEntity(_bp);
+							if (_te != null) {
+								try {
+									_te.read(_bso, _bnbt);
+								} catch (Exception ignored) {
+								}
 							}
 						}
 					}
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos(x, y, z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putString("crop", "coffee");
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos(x, y, z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("dayFilled", StarcraftvalleyModVariables.MapVariables.get(world).TotalDays);
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					removeItem = 5;
+				} else {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+						((PlayerEntity) entity).sendStatusMessage(
+								new StringTextComponent("\u00A72[\u00A76Keg\u00A72]\u00A7f : \u00A7e5 Coffee Beans to brew Coffee"), (false));
+					}
 				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos(x, y, z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putString("crop", "coffee");
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			} else if ((item).getItem() == TeaLeavesItem.block) {
+				if (((item)).getCount() >= 2) {
+					{
+						BlockPos _bp = new BlockPos(x, y, z);
+						BlockState _bs = KegProcessingBlock.block.getDefaultState();
+						BlockState _bso = world.getBlockState(_bp);
+						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+							if (_property != null && _bs.get(_property) != null)
+								try {
+									_bs = _bs.with(_property, (Comparable) entry.getValue());
+								} catch (Exception e) {
+								}
+						}
+						TileEntity _te = world.getTileEntity(_bp);
+						CompoundNBT _bnbt = null;
+						if (_te != null) {
+							_bnbt = _te.write(new CompoundNBT());
+							_te.remove();
+						}
+						world.setBlockState(_bp, _bs, 3);
+						if (_bnbt != null) {
+							_te = world.getTileEntity(_bp);
+							if (_te != null) {
+								try {
+									_te.read(_bso, _bnbt);
+								} catch (Exception ignored) {
+								}
+							}
+						}
+					}
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos(x, y, z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putString("crop", "tea");
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos(x, y, z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("dayFilled", StarcraftvalleyModVariables.MapVariables.get(world).TotalDays);
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					removeItem = 2;
+				} else {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+						((PlayerEntity) entity).sendStatusMessage(
+								new StringTextComponent("\u00A72[\u00A76Keg\u00A72]\u00A7f : \u00A7e2 Tea Leaves to brew Tea"), (false));
+					}
 				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos(x, y, z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("dayFilled", StarcraftvalleyModVariables.MapVariables.get(world).TotalDays);
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				removeItem = 5;
 			}
 			if (!(new Object() {
 				public boolean checkGamemode(Entity _ent) {

@@ -1,5 +1,5 @@
 {
-  "parent": "starcraftvalley:block/hamsters",
+  "parent": "starcraftvalley:block/shippingbin",
   "display": {
     "thirdperson": {
       "rotation": [

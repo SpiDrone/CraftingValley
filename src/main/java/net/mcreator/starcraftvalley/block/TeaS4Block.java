@@ -60,7 +60,7 @@ import net.minecraft.block.Block;
 import net.mcreator.starcraftvalley.procedures.HarvestTeaProcedure;
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.TeaSeedsItem;
-import net.mcreator.starcraftvalley.item.TeaItem;
+import net.mcreator.starcraftvalley.item.TeaLeavesItem;
 import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
 
 import javax.annotation.Nullable;
@@ -161,7 +161,7 @@ public class TeaS4Block extends StarcraftvalleyModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(TeaItem.block, (int) (0)));
+			return Collections.singletonList(new ItemStack(TeaLeavesItem.block, (int) (0)));
 		}
 
 		@Override

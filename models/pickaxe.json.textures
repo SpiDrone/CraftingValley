@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "pickaxe1"
+      },
+      "name": "default"
+    },
+    "pickaxe_copper": {
+      "map": {
+        "0": "pickaxe2"
+      },
+      "name": "pickaxe_copper"
+    },
+    "pickaxe_silver": {
+      "map": {
+        "0": "pickaxe3"
+      },
+      "name": "pickaxe_silver"
+    }
+  }
+}

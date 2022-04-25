@@ -1,0 +1,82 @@
+{
+  "_fv": 27,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Farming",
+          "color": {
+            "value": -13395712,
+            "falpha": 0.0
+          },
+          "name": "Farming",
+          "x": 128,
+          "y": 46
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "lvl",
+          "width": 19,
+          "height": 20,
+          "name": "fl",
+          "x": 166,
+          "y": 42
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "xp",
+          "width": 19,
+          "height": 20,
+          "name": "fx",
+          "x": 187,
+          "y": 42
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Pr.",
+          "width": 19,
+          "height": 20,
+          "name": "fp",
+          "x": 208,
+          "y": 42
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "[ O ]",
+          "onClick": {
+            "name": "StarminSkillsGuiB1"
+          },
+          "width": 37,
+          "height": 20,
+          "name": "[ O ]",
+          "x": 256,
+          "y": 42
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

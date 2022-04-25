@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "starcraftvalley:tea_leaves",
     "starcraftvalley:coffee_bean"
   ]
 }

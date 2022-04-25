@@ -14,6 +14,7 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.item.GrapesItem;
 import net.mcreator.starcraftvalley.block.GrapesS3Block;
+import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
 import net.mcreator.starcraftvalley.StarcraftvalleyMod;
 
 import java.util.Map;
@@ -85,6 +86,25 @@ public class HarvestGrapesProcedure {
 				_tileEntity.getTileData().putDouble("growthStage", 7);
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (new Object() {
+			public boolean getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, new BlockPos(x, y, z), "grapeseed")) {
+			{
+				double _setval = Math.ceil(((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingXp + 13)
+						* (1 + (entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingPrestige / 20));
+				entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.FarmingXp = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

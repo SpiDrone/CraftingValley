@@ -1,0 +1,11 @@
+{
+  "_fv": 27,
+  "_type": "tab",
+  "definition": {
+    "name": "[Sprout] Blocks",
+    "icon": {
+      "value": "CUSTOM:Keg"
+    },
+    "showSearch": false
+  }
+}

@@ -7,12 +7,12 @@ import net.minecraft.world.World;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.starcraftvalley.procedures.CoffeeFoodEatenProcedure;
+import net.mcreator.starcraftvalley.itemgroup.TabFoodstuffItemGroup;
 import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
 
 import java.util.stream.Stream;
@@ -36,7 +36,7 @@ public class CoffeeItem extends StarcraftvalleyModElements.ModElement {
 
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(32).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(TabFoodstuffItemGroup.tab).maxStackSize(32).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(4).saturation(0.3f).setAlwaysEdible()
 
 							.build()));

@@ -23,6 +23,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
 import net.mcreator.starcraftvalley.procedures.StarminGuiOverlayProcedure;
+import net.mcreator.starcraftvalley.procedures.StarminGuiB4Procedure;
+import net.mcreator.starcraftvalley.procedures.StarminGuiB3Procedure;
 import net.mcreator.starcraftvalley.procedures.StarminGuiB2Procedure;
 import net.mcreator.starcraftvalley.procedures.StarminGuiB1Procedure;
 import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
@@ -204,6 +206,20 @@ public class StarminGuiGui extends StarcraftvalleyModElements.ModElement {
 
 			StarminGuiOverlayProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 3) {
+
+			StarminGuiB3Procedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 4) {
+
+			StarminGuiB4Procedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 

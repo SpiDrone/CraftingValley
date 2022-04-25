@@ -35,12 +35,12 @@ public class DayCycleProcedure {
 		}
 		IWorld world = (IWorld) dependencies.get("world");
 		if (StarcraftvalleyModVariables.MapVariables.get(world).TotalDays < world.getWorldInfo().getDayTime() / 24000) {
-			if (StarcraftvalleyModVariables.MapVariables.get(world).day == 28) {
+			if (StarcraftvalleyModVariables.MapVariables.get(world).day >= 28) {
 				StarcraftvalleyModVariables.MapVariables.get(world).season = (StarcraftvalleyModVariables.MapVariables.get(world).season + 1);
 				StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
 				StarcraftvalleyModVariables.MapVariables.get(world).day = 1;
 				StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
-				if (StarcraftvalleyModVariables.MapVariables.get(world).season == 5) {
+				if (StarcraftvalleyModVariables.MapVariables.get(world).season >= 5) {
 					StarcraftvalleyModVariables.MapVariables.get(world).year = (StarcraftvalleyModVariables.MapVariables.get(world).year + 1);
 					StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
 					StarcraftvalleyModVariables.MapVariables.get(world).season = 0;

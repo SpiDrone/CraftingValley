@@ -79,6 +79,15 @@ public class FallSeedsPlantProcedure {
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos(x, y + 1, z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putBoolean("grapeseed", (true));
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
 			}
 			if (!(new Object() {
 				public boolean checkGamemode(Entity _ent) {

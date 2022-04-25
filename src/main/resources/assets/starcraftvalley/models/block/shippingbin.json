@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "starcraftvalley:blocks/trellis",
+    "up": "starcraftvalley:blocks/trellis",
+    "north": "starcraftvalley:blocks/trellis",
+    "east": "starcraftvalley:blocks/trellis",
+    "south": "starcraftvalley:blocks/trellis",
+    "west": "starcraftvalley:blocks/trellis",
+    "particle": "starcraftvalley:blocks/trellis"
+  }
+}
