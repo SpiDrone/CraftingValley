@@ -1,0 +1,7 @@
+{
+  "parent": "sprout:custom/pickaxe",
+  "textures": {
+    "0": "sprout:blocks/pickaxe2",
+    "particle": "sprout:items/strawberry"
+  }
+}

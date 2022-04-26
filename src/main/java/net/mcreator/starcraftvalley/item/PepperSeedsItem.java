@@ -19,7 +19,7 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.procedures.SummerSeedsPlantProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabseedsItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -27,12 +27,12 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class PepperSeedsItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:pepper_seeds")
+@SproutModElements.ModElement.Tag
+public class PepperSeedsItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:pepper_seeds")
 	public static final Item block = null;
 
-	public PepperSeedsItem(StarcraftvalleyModElements instance) {
+	public PepperSeedsItem(SproutModElements instance) {
 		super(instance, 74);
 	}
 

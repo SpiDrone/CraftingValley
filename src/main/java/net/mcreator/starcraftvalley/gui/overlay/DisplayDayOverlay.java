@@ -13,7 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.starcraftvalley.procedures.DisplayConditionsProcedure;
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
+import net.mcreator.starcraftvalley.SproutModVariables;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -48,22 +48,21 @@ public class DisplayDayOverlay {
 			if (DisplayConditionsProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
-						"D " + (int) (StarcraftvalleyModVariables.MapVariables.get(world).day) + "", posX + -212, posY + -119, -1);
+						"D " + (int) (SproutModVariables.MapVariables.get(world).day) + "", posX + -212, posY + -119, -1);
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
-						"Y: " + (int) (StarcraftvalleyModVariables.MapVariables.get(world).year) + "", posX + -212, posY + -97, -6750208);
+						"Y: " + (int) (SproutModVariables.MapVariables.get(world).year) + "", posX + -212, posY + -97, -6750208);
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
-						"S " + (int) (StarcraftvalleyModVariables.MapVariables.get(world).season) + "", posX + -212, posY + -108, -1);
+						"S " + (int) (SproutModVariables.MapVariables.get(world).season) + "", posX + -212, posY + -108, -1);
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
-						"Coins: " + (int) ((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new StarcraftvalleyModVariables.PlayerVariables())).Coins) + "",
+						"Coins: " + (int) ((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new SproutModVariables.PlayerVariables())).Coins) + "",
 						posX + -212, posY + -86, -1);
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
 						"FarmL: "
-								+ (int) ((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingLvl)
-								+ " FarmXp: "
-								+ ((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingXp)
+								+ (int) ((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new SproutModVariables.PlayerVariables())).FarmingLvl)
+								+ " FarmXp: " + ((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new SproutModVariables.PlayerVariables())).FarmingXp)
 								+ "",
 						posX + -211, posY + -77, -13369600);
 			}

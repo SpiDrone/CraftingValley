@@ -1,0 +1,8 @@
+{
+  "parent": "sprout:custom/earth",
+  "textures": {
+    "all": "sprout:blocks/tilledwetearth",
+    "particle": "sprout:blocks/tilledwetearth",
+    "0": "sprout:blocks/tilledwetearth"
+  }
+}

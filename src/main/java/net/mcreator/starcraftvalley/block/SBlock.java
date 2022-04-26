@@ -30,7 +30,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -39,12 +39,12 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class SBlock extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:s")
+@SproutModElements.ModElement.Tag
+public class SBlock extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:s")
 	public static final Block block = null;
 
-	public SBlock(StarcraftvalleyModElements instance) {
+	public SBlock(SproutModElements instance) {
 		super(instance, 84);
 	}
 

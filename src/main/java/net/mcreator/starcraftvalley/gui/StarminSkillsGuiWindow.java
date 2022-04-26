@@ -15,7 +15,7 @@ import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.HashMap;
 
@@ -43,7 +43,7 @@ public class StarminSkillsGuiWindow extends ContainerScreen<StarminSkillsGui.Gui
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("starcraftvalley:textures/starmin_skills.png");
+	private static final ResourceLocation texture = new ResourceLocation("sprout:textures/starmin_skills.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -107,7 +107,7 @@ public class StarminSkillsGuiWindow extends ContainerScreen<StarminSkillsGui.Gui
 		minecraft.keyboardListener.enableRepeatEvents(true);
 		this.addButton(new Button(this.guiLeft + 5, this.guiTop + 4, 37, 20, new StringTextComponent("[ O ]"), e -> {
 			if (true) {
-				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminSkillsGui.ButtonPressedMessage(0, x, y, z));
+				SproutMod.PACKET_HANDLER.sendToServer(new StarminSkillsGui.ButtonPressedMessage(0, x, y, z));
 				StarminSkillsGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));

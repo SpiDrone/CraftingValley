@@ -1,0 +1,8 @@
+{
+  "parent": "sprout:custom/sprinkler",
+  "textures": {
+    "all": "sprout:blocks/sprinkler2",
+    "particle": "sprout:blocks/sprinkler2",
+    "0": "sprout:blocks/sprinkler2"
+  }
+}

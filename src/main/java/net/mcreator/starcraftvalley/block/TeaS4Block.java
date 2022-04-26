@@ -61,7 +61,7 @@ import net.mcreator.starcraftvalley.procedures.HarvestTeaProcedure;
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.TeaSeedsItem;
 import net.mcreator.starcraftvalley.item.TeaLeavesItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -73,14 +73,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class TeaS4Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:tea_s_4")
+@SproutModElements.ModElement.Tag
+public class TeaS4Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:tea_s_4")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:tea_s_4")
+	@ObjectHolder("sprout:tea_s_4")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public TeaS4Block(StarcraftvalleyModElements instance) {
+	public TeaS4Block(SproutModElements instance) {
 		super(instance, 58);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

@@ -19,7 +19,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.procedures.WateringSoilPlantProcedure;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -27,12 +27,12 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class WateringCanItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:watering_can")
+@SproutModElements.ModElement.Tag
+public class WateringCanItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:watering_can")
 	public static final Item block = null;
 
-	public WateringCanItem(StarcraftvalleyModElements instance) {
+	public WateringCanItem(SproutModElements instance) {
 		super(instance, 34);
 	}
 

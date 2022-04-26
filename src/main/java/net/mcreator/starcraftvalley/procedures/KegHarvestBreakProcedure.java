@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.ItemEntity;
 
 import net.mcreator.starcraftvalley.item.CoffeeItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 
@@ -17,22 +17,22 @@ public class KegHarvestBreakProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure KegHarvestBreak!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure KegHarvestBreak!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure KegHarvestBreak!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure KegHarvestBreak!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure KegHarvestBreak!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure KegHarvestBreak!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure KegHarvestBreak!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure KegHarvestBreak!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");

@@ -1,0 +1,8 @@
+{
+  "parent": "sprout:custom/cross",
+  "textures": {
+    "all": "sprout:blocks/parsnip3",
+    "particle": "sprout:blocks/parsnip3",
+    "0": "sprout:blocks/parsnip3"
+  }
+}

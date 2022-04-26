@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "sprout:block/keg"
+    },
+    "facing=east": {
+      "model": "sprout:block/keg",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "sprout:block/keg",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "sprout:block/keg",
+      "y": 270
+    }
+  }
+}

@@ -20,8 +20,8 @@ import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
 import net.mcreator.starcraftvalley.block.PepperS1Block;
 import net.mcreator.starcraftvalley.block.CabbageRedS1Block;
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutModVariables;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -33,32 +33,32 @@ public class SummerSeedsPlantProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure SummerSeedsPlant!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure SummerSeedsPlant!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure SummerSeedsPlant!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure SummerSeedsPlant!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure SummerSeedsPlant!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure SummerSeedsPlant!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure SummerSeedsPlant!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure SummerSeedsPlant!");
 			return;
 		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency entity for procedure SummerSeedsPlant!");
+				SproutMod.LOGGER.warn("Failed to load dependency entity for procedure SummerSeedsPlant!");
 			return;
 		}
 		if (dependencies.get("itemstack") == null) {
 			if (!dependencies.containsKey("itemstack"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency itemstack for procedure SummerSeedsPlant!");
+				SproutMod.LOGGER.warn("Failed to load dependency itemstack for procedure SummerSeedsPlant!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
@@ -67,7 +67,7 @@ public class SummerSeedsPlantProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-		if (StarcraftvalleyModVariables.MapVariables.get(world).season == 1
+		if (SproutModVariables.MapVariables.get(world).season == 1
 				&& ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == TilledEarthBlock.block
 						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthBlock.block)) {
 			if (PepperSeedsItem.block == itemstack.getItem()) {

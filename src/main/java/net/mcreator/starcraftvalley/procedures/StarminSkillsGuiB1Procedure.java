@@ -3,8 +3,8 @@ package net.mcreator.starcraftvalley.procedures;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutModVariables;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -14,12 +14,12 @@ public class StarminSkillsGuiB1Procedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency entity for procedure StarminSkillsGuiB1!");
+				SproutMod.LOGGER.warn("Failed to load dependency entity for procedure StarminSkillsGuiB1!");
 			return;
 		}
 		if (dependencies.get("guistate") == null) {
 			if (!dependencies.containsKey("guistate"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency guistate for procedure StarminSkillsGuiB1!");
+				SproutMod.LOGGER.warn("Failed to load dependency guistate for procedure StarminSkillsGuiB1!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -51,7 +51,7 @@ public class StarminSkillsGuiB1Procedure {
 						return "";
 					}
 				}.getText());
-				entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FarmingLvl = _setval;
 					capability.syncPlayerVariables(entity);
 				});
@@ -84,7 +84,7 @@ public class StarminSkillsGuiB1Procedure {
 						return "";
 					}
 				}.getText());
-				entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FarmingXp = _setval;
 					capability.syncPlayerVariables(entity);
 				});
@@ -117,7 +117,7 @@ public class StarminSkillsGuiB1Procedure {
 						return "";
 					}
 				}.getText());
-				entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FarmingPrestige = _setval;
 					capability.syncPlayerVariables(entity);
 				});

@@ -16,19 +16,19 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.procedures.CoffeeSeedsPlantProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabseedsItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class CoffeeBeanItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:coffee_bean")
+@SproutModElements.ModElement.Tag
+public class CoffeeBeanItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:coffee_bean")
 	public static final Item block = null;
 
-	public CoffeeBeanItem(StarcraftvalleyModElements instance) {
+	public CoffeeBeanItem(SproutModElements instance) {
 		super(instance, 65);
 	}
 

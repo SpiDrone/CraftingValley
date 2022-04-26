@@ -1,0 +1,8 @@
+{
+  "parent": "sprout:custom/cross",
+  "textures": {
+    "all": "sprout:blocks/tea2",
+    "particle": "sprout:blocks/tea2",
+    "0": "sprout:blocks/tea2"
+  }
+}

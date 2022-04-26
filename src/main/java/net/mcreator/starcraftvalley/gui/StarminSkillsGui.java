@@ -23,7 +23,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
 import net.mcreator.starcraftvalley.procedures.StarminSkillsGuiB1Procedure;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.function.Supplier;
@@ -31,12 +31,12 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class StarminSkillsGui extends StarcraftvalleyModElements.ModElement {
+@SproutModElements.ModElement.Tag
+public class StarminSkillsGui extends SproutModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 
-	public StarminSkillsGui(StarcraftvalleyModElements instance) {
+	public StarminSkillsGui(SproutModElements instance) {
 		super(instance, 122);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);

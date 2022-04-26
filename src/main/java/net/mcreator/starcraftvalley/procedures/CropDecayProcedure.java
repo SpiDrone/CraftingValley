@@ -10,8 +10,8 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutModVariables;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -23,22 +23,22 @@ public class CropDecayProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure CropDecay!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure CropDecay!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure CropDecay!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure CropDecay!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure CropDecay!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure CropDecay!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure CropDecay!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure CropDecay!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
@@ -53,15 +53,15 @@ public class CropDecayProcedure {
 						.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
 				|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:winter_crop"))
 						.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())) {
-			if (!(StarcraftvalleyModVariables.MapVariables.get(world).season == 0
+			if (!(SproutModVariables.MapVariables.get(world).season == 0
 					&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:spring_crop"))
 							.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
-					|| StarcraftvalleyModVariables.MapVariables.get(world).season == 1
+					|| SproutModVariables.MapVariables.get(world).season == 1
 							&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:summer_crop"))
 									.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
-					|| StarcraftvalleyModVariables.MapVariables.get(world).season == 2 && BlockTags.getCollection()
+					|| SproutModVariables.MapVariables.get(world).season == 2 && BlockTags.getCollection()
 							.getTagByID(new ResourceLocation("forge:fall_crop")).contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
-					|| StarcraftvalleyModVariables.MapVariables.get(world).season == 3
+					|| SproutModVariables.MapVariables.get(world).season == 3
 							&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:winter_crop"))
 									.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()))) {
 				{

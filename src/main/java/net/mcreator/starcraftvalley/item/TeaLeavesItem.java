@@ -9,14 +9,14 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.itemgroup.TabcropsItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class TeaLeavesItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:tea_leaves")
+@SproutModElements.ModElement.Tag
+public class TeaLeavesItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:tea_leaves")
 	public static final Item block = null;
 
-	public TeaLeavesItem(StarcraftvalleyModElements instance) {
+	public TeaLeavesItem(SproutModElements instance) {
 		super(instance, 110);
 	}
 

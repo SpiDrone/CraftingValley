@@ -38,7 +38,7 @@ import net.mcreator.starcraftvalley.procedures.HarvestCauliflowerProcedure;
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.CauliflowerSeedsItem;
 import net.mcreator.starcraftvalley.item.CauliflowerItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -47,12 +47,12 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class CauliflowerS4Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:cauliflower_s_4")
+@SproutModElements.ModElement.Tag
+public class CauliflowerS4Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:cauliflower_s_4")
 	public static final Block block = null;
 
-	public CauliflowerS4Block(StarcraftvalleyModElements instance) {
+	public CauliflowerS4Block(SproutModElements instance) {
 		super(instance, 21);
 	}
 

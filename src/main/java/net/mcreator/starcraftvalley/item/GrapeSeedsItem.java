@@ -19,7 +19,7 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.procedures.FallSeedsPlantProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabseedsItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -27,12 +27,12 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class GrapeSeedsItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:grape_seeds")
+@SproutModElements.ModElement.Tag
+public class GrapeSeedsItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:grape_seeds")
 	public static final Item block = null;
 
-	public GrapeSeedsItem(StarcraftvalleyModElements instance) {
+	public GrapeSeedsItem(SproutModElements instance) {
 		super(instance, 76);
 	}
 

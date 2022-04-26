@@ -53,7 +53,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.GrapeSeedsItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -65,14 +65,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class GrapesS3Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:grapes_s_3")
+@SproutModElements.ModElement.Tag
+public class GrapesS3Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:grapes_s_3")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:grapes_s_3")
+	@ObjectHolder("sprout:grapes_s_3")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public GrapesS3Block(StarcraftvalleyModElements instance) {
+	public GrapesS3Block(SproutModElements instance) {
 		super(instance, 29);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

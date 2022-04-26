@@ -5,7 +5,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 
@@ -14,7 +14,7 @@ public class CoffeeFoodEatenProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency entity for procedure CoffeeFoodEaten!");
+				SproutMod.LOGGER.warn("Failed to load dependency entity for procedure CoffeeFoodEaten!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

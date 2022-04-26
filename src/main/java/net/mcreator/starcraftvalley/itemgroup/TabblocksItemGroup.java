@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.mcreator.starcraftvalley.block.KegBlock;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class TabblocksItemGroup extends StarcraftvalleyModElements.ModElement {
-	public TabblocksItemGroup(StarcraftvalleyModElements instance) {
+@SproutModElements.ModElement.Tag
+public class TabblocksItemGroup extends SproutModElements.ModElement {
+	public TabblocksItemGroup(SproutModElements instance) {
 		super(instance, 116);
 	}
 

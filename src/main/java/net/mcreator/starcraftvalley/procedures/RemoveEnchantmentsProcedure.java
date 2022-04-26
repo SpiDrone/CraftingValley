@@ -5,7 +5,7 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantment;
 
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 
@@ -14,7 +14,7 @@ public class RemoveEnchantmentsProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("itemstack") == null) {
 			if (!dependencies.containsKey("itemstack"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency itemstack for procedure RemoveEnchantments!");
+				SproutMod.LOGGER.warn("Failed to load dependency itemstack for procedure RemoveEnchantments!");
 			return;
 		}
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");

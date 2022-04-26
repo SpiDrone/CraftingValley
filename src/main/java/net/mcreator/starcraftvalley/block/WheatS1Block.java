@@ -56,7 +56,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.WheatSeedsItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -68,14 +68,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class WheatS1Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:wheat_s_1")
+@SproutModElements.ModElement.Tag
+public class WheatS1Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:wheat_s_1")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:wheat_s_1")
+	@ObjectHolder("sprout:wheat_s_1")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public WheatS1Block(StarcraftvalleyModElements instance) {
+	public WheatS1Block(SproutModElements instance) {
 		super(instance, 136);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

@@ -33,7 +33,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.CauliflowerSeedsItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -42,12 +42,12 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class CauliflowerS3Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:cauliflower_s_3")
+@SproutModElements.ModElement.Tag
+public class CauliflowerS3Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:cauliflower_s_3")
 	public static final Block block = null;
 
-	public CauliflowerS3Block(StarcraftvalleyModElements instance) {
+	public CauliflowerS3Block(SproutModElements instance) {
 		super(instance, 20);
 	}
 

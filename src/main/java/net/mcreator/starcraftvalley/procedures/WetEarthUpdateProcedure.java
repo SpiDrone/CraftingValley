@@ -40,8 +40,8 @@ import net.mcreator.starcraftvalley.block.CabbageRedS5Block;
 import net.mcreator.starcraftvalley.block.CabbageRedS4Block;
 import net.mcreator.starcraftvalley.block.CabbageRedS3Block;
 import net.mcreator.starcraftvalley.block.CabbageRedS2Block;
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutModVariables;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -53,22 +53,22 @@ public class WetEarthUpdateProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure WetEarthUpdate!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure WetEarthUpdate!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure WetEarthUpdate!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure WetEarthUpdate!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure WetEarthUpdate!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure WetEarthUpdate!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure WetEarthUpdate!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure WetEarthUpdate!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
@@ -76,7 +76,7 @@ public class WetEarthUpdateProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		boolean returnvalue = false;
-		if (StarcraftvalleyModVariables.MapVariables.get(world).day != new Object() {
+		if (SproutModVariables.MapVariables.get(world).day != new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
@@ -109,17 +109,14 @@ public class WetEarthUpdateProcedure {
 					}
 				}
 			}
-			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:spring_crop")).contains(
-					(world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()) && StarcraftvalleyModVariables.MapVariables.get(world).season == 0
-					|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:summer_crop"))
-							.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
-							&& StarcraftvalleyModVariables.MapVariables.get(world).season == 1
-					|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:fall_crop"))
-							.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
-							&& StarcraftvalleyModVariables.MapVariables.get(world).season == 2
-					|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:winter_crop"))
-							.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock())
-							&& StarcraftvalleyModVariables.MapVariables.get(world).season == 3) {
+			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:spring_crop"))
+					.contains((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()) && SproutModVariables.MapVariables.get(world).season == 0
+					|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:summer_crop")).contains(
+							(world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()) && SproutModVariables.MapVariables.get(world).season == 1
+					|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:fall_crop")).contains(
+							(world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()) && SproutModVariables.MapVariables.get(world).season == 2
+					|| BlockTags.getCollection().getTagByID(new ResourceLocation("forge:winter_crop")).contains(
+							(world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()) && SproutModVariables.MapVariables.get(world).season == 3) {
 				if ((new Object() {
 					public String getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);

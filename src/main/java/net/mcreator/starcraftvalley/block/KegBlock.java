@@ -43,7 +43,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.FillKegProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabblocksItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -52,12 +52,12 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class KegBlock extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:keg")
+@SproutModElements.ModElement.Tag
+public class KegBlock extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:keg")
 	public static final Block block = null;
 
-	public KegBlock(StarcraftvalleyModElements instance) {
+	public KegBlock(SproutModElements instance) {
 		super(instance, 96);
 	}
 

@@ -10,14 +10,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.mcreator.starcraftvalley.itemgroup.TabcropsItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class StrawberryItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:strawberry")
+@SproutModElements.ModElement.Tag
+public class StrawberryItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:strawberry")
 	public static final Item block = null;
 
-	public StrawberryItem(StarcraftvalleyModElements instance) {
+	public StrawberryItem(SproutModElements instance) {
 		super(instance, 14);
 	}
 

@@ -61,7 +61,7 @@ import net.mcreator.starcraftvalley.procedures.HarvestPepperProcedure;
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.PepperSeedsItem;
 import net.mcreator.starcraftvalley.item.PepperItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -73,14 +73,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class PepperS3Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:pepper_s_3")
+@SproutModElements.ModElement.Tag
+public class PepperS3Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:pepper_s_3")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:pepper_s_3")
+	@ObjectHolder("sprout:pepper_s_3")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public PepperS3Block(StarcraftvalleyModElements instance) {
+	public PepperS3Block(SproutModElements instance) {
 		super(instance, 26);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

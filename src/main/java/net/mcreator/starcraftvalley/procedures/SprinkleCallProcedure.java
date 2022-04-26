@@ -9,7 +9,7 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -21,22 +21,22 @@ public class SprinkleCallProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure SprinkleCall!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure SprinkleCall!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure SprinkleCall!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure SprinkleCall!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure SprinkleCall!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure SprinkleCall!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure SprinkleCall!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure SprinkleCall!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");

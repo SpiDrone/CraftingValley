@@ -5,7 +5,7 @@ import net.minecraft.util.math.BlockPos;
 
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 
@@ -14,22 +14,22 @@ public class BreakCheckProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure BreakCheck!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure BreakCheck!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure BreakCheck!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure BreakCheck!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure BreakCheck!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure BreakCheck!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure BreakCheck!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure BreakCheck!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");

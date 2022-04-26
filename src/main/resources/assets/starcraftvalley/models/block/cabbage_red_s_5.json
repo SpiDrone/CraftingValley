@@ -1,8 +1,0 @@
-{
-  "parent": "starcraftvalley:custom/cross",
-  "textures": {
-    "all": "starcraftvalley:blocks/cabbage_red5",
-    "particle": "starcraftvalley:blocks/cabbage_red5",
-    "0": "starcraftvalley:blocks/cabbage_red5"
-  }
-}

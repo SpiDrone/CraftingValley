@@ -15,7 +15,7 @@ import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.HashMap;
 
@@ -44,7 +44,7 @@ public class StarminGuiGuiWindow extends ContainerScreen<StarminGuiGui.GuiContai
 		this.ySize = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("starcraftvalley:textures/starmin_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("sprout:textures/starmin_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -190,13 +190,13 @@ public class StarminGuiGuiWindow extends ContainerScreen<StarminGuiGui.GuiContai
 		this.children.add(this.day);
 		this.addButton(new Button(this.guiLeft + 2, this.guiTop + 3, 56, 20, new StringTextComponent("Set Date"), e -> {
 			if (true) {
-				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(0, x, y, z));
+				SproutMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(0, x, y, z));
 				StarminGuiGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
 		this.addButton(new Button(this.guiLeft + 3, this.guiTop + 39, 82, 20, new StringTextComponent("Set Balance"), e -> {
 			if (true) {
-				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(1, x, y, z));
+				SproutMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(1, x, y, z));
 				StarminGuiGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
@@ -228,19 +228,19 @@ public class StarminGuiGuiWindow extends ContainerScreen<StarminGuiGui.GuiContai
 		this.children.add(this.coins);
 		this.addButton(new Button(this.guiLeft + 4, this.guiTop + 71, 103, 20, new StringTextComponent("Display Overlay"), e -> {
 			if (true) {
-				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(2, x, y, z));
+				SproutMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(2, x, y, z));
 				StarminGuiGui.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
 		this.addButton(new Button(this.guiLeft + 126, this.guiTop + 3, 22, 20, new StringTextComponent("+1"), e -> {
 			if (true) {
-				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(3, x, y, z));
+				SproutMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(3, x, y, z));
 				StarminGuiGui.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
 		this.addButton(new Button(this.guiLeft + 116, this.guiTop + 143, 56, 20, new StringTextComponent("Skills >"), e -> {
 			if (true) {
-				StarcraftvalleyMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(4, x, y, z));
+				SproutMod.PACKET_HANDLER.sendToServer(new StarminGuiGui.ButtonPressedMessage(4, x, y, z));
 				StarminGuiGui.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));

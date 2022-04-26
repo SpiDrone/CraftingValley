@@ -63,7 +63,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.KegUpdateProcedure;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -76,14 +76,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class KegProcessingBlock extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:keg_processing")
+@SproutModElements.ModElement.Tag
+public class KegProcessingBlock extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:keg_processing")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:keg_processing")
+	@ObjectHolder("sprout:keg_processing")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public KegProcessingBlock(StarcraftvalleyModElements instance) {
+	public KegProcessingBlock(SproutModElements instance) {
 		super(instance, 98);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

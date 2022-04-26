@@ -54,7 +54,7 @@ import net.minecraft.block.Block;
 import net.mcreator.starcraftvalley.procedures.WetEarthUpdateProcedure;
 import net.mcreator.starcraftvalley.procedures.RevertToDirtProcedure;
 import net.mcreator.starcraftvalley.procedures.PlaceWateredProcedure;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -67,14 +67,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class WetEarthBlock extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:wet_earth")
+@SproutModElements.ModElement.Tag
+public class WetEarthBlock extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:wet_earth")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:wet_earth")
+	@ObjectHolder("sprout:wet_earth")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public WetEarthBlock(StarcraftvalleyModElements instance) {
+	public WetEarthBlock(SproutModElements instance) {
 		super(instance, 6);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

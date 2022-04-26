@@ -14,7 +14,7 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.item.StrawberryItem;
 import net.mcreator.starcraftvalley.block.StrawberryS3Block;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 
@@ -23,27 +23,27 @@ public class HarvestPProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure HarvestP!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure HarvestP!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure HarvestP!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure HarvestP!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure HarvestP!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure HarvestP!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure HarvestP!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure HarvestP!");
 			return;
 		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency entity for procedure HarvestP!");
+				SproutMod.LOGGER.warn("Failed to load dependency entity for procedure HarvestP!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");

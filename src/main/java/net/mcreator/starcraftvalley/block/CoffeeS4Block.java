@@ -60,7 +60,7 @@ import net.minecraft.block.Block;
 import net.mcreator.starcraftvalley.procedures.HarvestCoffeeProcedure;
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.CoffeeBeanItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -72,14 +72,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class CoffeeS4Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:coffee_s_4")
+@SproutModElements.ModElement.Tag
+public class CoffeeS4Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:coffee_s_4")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:coffee_s_4")
+	@ObjectHolder("sprout:coffee_s_4")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public CoffeeS4Block(StarcraftvalleyModElements instance) {
+	public CoffeeS4Block(SproutModElements instance) {
 		super(instance, 68);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

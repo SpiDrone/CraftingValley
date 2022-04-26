@@ -10,8 +10,8 @@ import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutModVariables;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -21,27 +21,27 @@ public class StarminGuiB1Procedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure StarminGuiB1!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure StarminGuiB1!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure StarminGuiB1!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure StarminGuiB1!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure StarminGuiB1!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure StarminGuiB1!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure StarminGuiB1!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure StarminGuiB1!");
 			return;
 		}
 		if (dependencies.get("guistate") == null) {
 			if (!dependencies.containsKey("guistate"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency guistate for procedure StarminGuiB1!");
+				SproutMod.LOGGER.warn("Failed to load dependency guistate for procedure StarminGuiB1!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
@@ -165,11 +165,11 @@ public class StarminGuiB1Procedure {
 						}
 					}.getText()) * 112) + "d"));
 		}
-		StarcraftvalleyModVariables.MapVariables.get(world).day = day;
-		StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
-		StarcraftvalleyModVariables.MapVariables.get(world).season = season;
-		StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
-		StarcraftvalleyModVariables.MapVariables.get(world).year = new Object() {
+		SproutModVariables.MapVariables.get(world).day = day;
+		SproutModVariables.MapVariables.get(world).syncData(world);
+		SproutModVariables.MapVariables.get(world).season = season;
+		SproutModVariables.MapVariables.get(world).syncData(world);
+		SproutModVariables.MapVariables.get(world).year = new Object() {
 			double convert(String s) {
 				try {
 					return Double.parseDouble(s.trim());
@@ -186,8 +186,8 @@ public class StarminGuiB1Procedure {
 				return "";
 			}
 		}.getText());
-		StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
-		StarcraftvalleyModVariables.MapVariables.get(world).TotalDays = (day + season * 28 + new Object() {
+		SproutModVariables.MapVariables.get(world).syncData(world);
+		SproutModVariables.MapVariables.get(world).TotalDays = (day + season * 28 + new Object() {
 			double convert(String s) {
 				try {
 					return Double.parseDouble(s.trim());
@@ -204,7 +204,7 @@ public class StarminGuiB1Procedure {
 				return "";
 			}
 		}.getText()) * 112);
-		StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
+		SproutModVariables.MapVariables.get(world).syncData(world);
 		if (day + season * 28 + new Object() {
 			double convert(String s) {
 				try {

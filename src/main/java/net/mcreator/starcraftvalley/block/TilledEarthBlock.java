@@ -30,7 +30,7 @@ import net.minecraft.block.Block;
 import net.mcreator.starcraftvalley.procedures.RevertToDirtProcedure;
 import net.mcreator.starcraftvalley.procedures.CropDecayProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabblocksItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Random;
@@ -40,12 +40,12 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class TilledEarthBlock extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:tilled_earth")
+@SproutModElements.ModElement.Tag
+public class TilledEarthBlock extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:tilled_earth")
 	public static final Block block = null;
 
-	public TilledEarthBlock(StarcraftvalleyModElements instance) {
+	public TilledEarthBlock(SproutModElements instance) {
 		super(instance, 4);
 	}
 

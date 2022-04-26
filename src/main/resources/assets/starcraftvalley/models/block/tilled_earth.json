@@ -1,8 +1,0 @@
-{
-  "parent": "starcraftvalley:custom/earth",
-  "textures": {
-    "all": "starcraftvalley:blocks/tilledearth",
-    "particle": "starcraftvalley:blocks/tilledearth",
-    "0": "starcraftvalley:blocks/tilledearth"
-  }
-}

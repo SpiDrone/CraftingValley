@@ -1,0 +1,8 @@
+{
+  "parent": "sprout:custom/cross",
+  "textures": {
+    "all": "sprout:blocks/potato1",
+    "particle": "sprout:blocks/potato1",
+    "0": "sprout:blocks/potato1"
+  }
+}

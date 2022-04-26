@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "sprout:blocks/trellis",
+    "up": "sprout:blocks/trellis",
+    "north": "sprout:blocks/trellis",
+    "east": "sprout:blocks/trellis",
+    "south": "sprout:blocks/trellis",
+    "west": "sprout:blocks/trellis",
+    "particle": "sprout:blocks/trellis"
+  }
+}

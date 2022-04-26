@@ -1,7 +1,0 @@
-{
-  "parent": "block/crop",
-  "textures": {
-    "crop": "starcraftvalley:blocks/coffee3",
-    "particle": "starcraftvalley:blocks/coffee3"
-  }
-}

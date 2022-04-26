@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.mcreator.starcraftvalley.item.StrawberrySeedsItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class TabseedsItemGroup extends StarcraftvalleyModElements.ModElement {
-	public TabseedsItemGroup(StarcraftvalleyModElements instance) {
+@SproutModElements.ModElement.Tag
+public class TabseedsItemGroup extends SproutModElements.ModElement {
+	public TabseedsItemGroup(SproutModElements instance) {
 		super(instance, 115);
 	}
 

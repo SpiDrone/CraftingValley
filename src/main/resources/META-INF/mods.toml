@@ -3,14 +3,14 @@ loaderVersion="[36,)"
 license="Academic Free License v3.0"
 
 [[mods]]
-modId="starcraftvalley"
+modId="sprout"
 version="1.0.0"
-displayName="StarCraftValley"
+displayName="Sprout"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
 authors="brend, MCreator"
 
-[[dependencies.starcraftvalley]]
+[[dependencies.sprout]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"

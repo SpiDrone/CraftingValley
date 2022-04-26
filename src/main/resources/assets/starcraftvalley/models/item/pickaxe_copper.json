@@ -1,7 +1,0 @@
-{
-  "parent": "starcraftvalley:custom/pickaxe",
-  "textures": {
-    "0": "starcraftvalley:blocks/pickaxe2",
-    "particle": "starcraftvalley:items/strawberry"
-  }
-}

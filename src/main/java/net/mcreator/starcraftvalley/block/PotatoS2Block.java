@@ -33,7 +33,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.PotatoSeedsItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -42,12 +42,12 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class PotatoS2Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:potato_s_2")
+@SproutModElements.ModElement.Tag
+public class PotatoS2Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:potato_s_2")
 	public static final Block block = null;
 
-	public PotatoS2Block(StarcraftvalleyModElements instance) {
+	public PotatoS2Block(SproutModElements instance) {
 		super(instance, 16);
 	}
 

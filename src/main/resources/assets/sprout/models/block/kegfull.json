@@ -1,0 +1,8 @@
+{
+  "parent": "sprout:custom/keg",
+  "textures": {
+    "all": "sprout:blocks/keg_animated",
+    "particle": "sprout:blocks/keg_animated",
+    "0": "sprout:blocks/keg_animated"
+  }
+}

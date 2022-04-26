@@ -1,8 +1,0 @@
-{
-  "parent": "starcraftvalley:custom/keg",
-  "textures": {
-    "all": "starcraftvalley:blocks/keg",
-    "particle": "starcraftvalley:blocks/keg",
-    "0": "starcraftvalley:blocks/keg"
-  }
-}

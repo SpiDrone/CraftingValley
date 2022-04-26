@@ -1,8 +1,0 @@
-{
-  "parent": "starcraftvalley:custom/cross",
-  "textures": {
-    "all": "starcraftvalley:blocks/tea1",
-    "particle": "starcraftvalley:blocks/tea1",
-    "0": "starcraftvalley:blocks/tea1"
-  }
-}

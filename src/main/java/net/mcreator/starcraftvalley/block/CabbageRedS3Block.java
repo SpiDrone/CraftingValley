@@ -56,7 +56,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.CabbageRedSeedsItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -68,14 +68,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class CabbageRedS3Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:cabbage_red_s_3")
+@SproutModElements.ModElement.Tag
+public class CabbageRedS3Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:cabbage_red_s_3")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:cabbage_red_s_3")
+	@ObjectHolder("sprout:cabbage_red_s_3")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public CabbageRedS3Block(StarcraftvalleyModElements instance) {
+	public CabbageRedS3Block(SproutModElements instance) {
 		super(instance, 131);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

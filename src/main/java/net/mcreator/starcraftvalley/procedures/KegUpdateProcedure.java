@@ -9,8 +9,8 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.block.KegfullBlock;
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutModVariables;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 
@@ -19,29 +19,29 @@ public class KegUpdateProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure KegUpdate!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure KegUpdate!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure KegUpdate!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure KegUpdate!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure KegUpdate!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure KegUpdate!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure KegUpdate!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure KegUpdate!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if (StarcraftvalleyModVariables.MapVariables.get(world).TotalDays != new Object() {
+		if (SproutModVariables.MapVariables.get(world).TotalDays != new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)

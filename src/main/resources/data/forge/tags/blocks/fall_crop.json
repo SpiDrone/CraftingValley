@@ -1,17 +1,17 @@
 {
   "replace": false,
   "values": [
-    "starcraftvalley:tea_s_2",
-    "starcraftvalley:tea_s_3",
-    "starcraftvalley:tea_s_1",
-    "starcraftvalley:grapes_s_1",
-    "starcraftvalley:wheat_s_3",
-    "starcraftvalley:grapes_s_4",
-    "starcraftvalley:wheat_s_4",
-    "starcraftvalley:grapes_s_3",
-    "starcraftvalley:wheat_s_1",
-    "starcraftvalley:grapes_s_2",
-    "starcraftvalley:wheat_s_2",
-    "starcraftvalley:tea_s_4"
+    "sprout:tea_s_2",
+    "sprout:tea_s_3",
+    "sprout:tea_s_1",
+    "sprout:grapes_s_1",
+    "sprout:wheat_s_3",
+    "sprout:grapes_s_4",
+    "sprout:wheat_s_4",
+    "sprout:grapes_s_3",
+    "sprout:wheat_s_1",
+    "sprout:grapes_s_2",
+    "sprout:wheat_s_2",
+    "sprout:tea_s_4"
   ]
 }

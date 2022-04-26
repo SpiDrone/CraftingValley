@@ -9,7 +9,7 @@ import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 
@@ -18,22 +18,22 @@ public class StarminGuiB3Procedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure StarminGuiB3!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure StarminGuiB3!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure StarminGuiB3!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure StarminGuiB3!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure StarminGuiB3!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure StarminGuiB3!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure StarminGuiB3!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure StarminGuiB3!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");

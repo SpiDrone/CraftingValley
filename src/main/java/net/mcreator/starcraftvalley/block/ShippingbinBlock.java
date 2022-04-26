@@ -22,7 +22,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.ShippingBinDepositProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabblocksItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -31,12 +31,12 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class ShippingbinBlock extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:shippingbin")
+@SproutModElements.ModElement.Tag
+public class ShippingbinBlock extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:shippingbin")
 	public static final Block block = null;
 
-	public ShippingbinBlock(StarcraftvalleyModElements instance) {
+	public ShippingbinBlock(SproutModElements instance) {
 		super(instance, 113);
 	}
 

@@ -16,19 +16,19 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.procedures.TeaSeedsPlantProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabseedsItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class TeaSeedsItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:tea_seeds")
+@SproutModElements.ModElement.Tag
+public class TeaSeedsItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:tea_seeds")
 	public static final Item block = null;
 
-	public TeaSeedsItem(StarcraftvalleyModElements instance) {
+	public TeaSeedsItem(SproutModElements instance) {
 		super(instance, 71);
 	}
 

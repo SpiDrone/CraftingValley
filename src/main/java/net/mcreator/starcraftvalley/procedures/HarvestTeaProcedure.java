@@ -15,8 +15,8 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.item.TeaLeavesItem;
 import net.mcreator.starcraftvalley.block.TeaS3Block;
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutModVariables;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 
@@ -25,27 +25,27 @@ public class HarvestTeaProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure HarvestTea!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure HarvestTea!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure HarvestTea!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure HarvestTea!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure HarvestTea!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure HarvestTea!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure HarvestTea!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure HarvestTea!");
 			return;
 		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency entity for procedure HarvestTea!");
+				SproutMod.LOGGER.warn("Failed to load dependency entity for procedure HarvestTea!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
@@ -89,20 +89,19 @@ public class HarvestTeaProcedure {
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		{
-			double _setval = Math.ceil(((entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingXp + 2)
-					* (1 + (entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingPrestige / 20));
-			entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+			double _setval = Math.ceil(((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new SproutModVariables.PlayerVariables())).FarmingXp + 2)
+					* (1 + (entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new SproutModVariables.PlayerVariables())).FarmingPrestige / 20));
+			entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.FarmingXp = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-			((PlayerEntity) entity).sendStatusMessage(
-					new StringTextComponent(("" + (entity.getCapability(StarcraftvalleyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new StarcraftvalleyModVariables.PlayerVariables())).FarmingXp)),
-					(false));
+			((PlayerEntity) entity)
+					.sendStatusMessage(new StringTextComponent(("" + (entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new SproutModVariables.PlayerVariables())).FarmingXp)), (false));
 		}
 	}
 }

@@ -16,7 +16,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 
 import net.mcreator.starcraftvalley.procedures.RemoveEnchantmentsProcedure;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -24,12 +24,12 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class PickaxebasicItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:pickaxebasic")
+@SproutModElements.ModElement.Tag
+public class PickaxebasicItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:pickaxebasic")
 	public static final Item block = null;
 
-	public PickaxebasicItem(StarcraftvalleyModElements instance) {
+	public PickaxebasicItem(SproutModElements instance) {
 		super(instance, 118);
 	}
 

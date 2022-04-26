@@ -1,0 +1,7 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "sprout:blocks/bush1",
+    "particle": "sprout:blocks/bush1"
+  }
+}

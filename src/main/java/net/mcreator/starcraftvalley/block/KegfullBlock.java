@@ -67,7 +67,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.KegHarvestProcedure;
 import net.mcreator.starcraftvalley.procedures.KegHarvestBreakProcedure;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -79,14 +79,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class KegfullBlock extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:kegfull")
+@SproutModElements.ModElement.Tag
+public class KegfullBlock extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:kegfull")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:kegfull")
+	@ObjectHolder("sprout:kegfull")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public KegfullBlock(StarcraftvalleyModElements instance) {
+	public KegfullBlock(SproutModElements instance) {
 		super(instance, 97);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

@@ -10,14 +10,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.mcreator.starcraftvalley.itemgroup.TabcropsItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class CabbageRedItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:cabbage_red")
+@SproutModElements.ModElement.Tag
+public class CabbageRedItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:cabbage_red")
 	public static final Item block = null;
 
-	public CabbageRedItem(StarcraftvalleyModElements instance) {
+	public CabbageRedItem(SproutModElements instance) {
 		super(instance, 126);
 	}
 

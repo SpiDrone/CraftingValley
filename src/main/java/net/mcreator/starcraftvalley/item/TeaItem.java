@@ -13,19 +13,19 @@ import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.starcraftvalley.procedures.CoffeeFoodEatenProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabFoodstuffItemGroup;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class TeaItem extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:tea")
+@SproutModElements.ModElement.Tag
+public class TeaItem extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:tea")
 	public static final Item block = null;
 
-	public TeaItem(StarcraftvalleyModElements instance) {
+	public TeaItem(SproutModElements instance) {
 		super(instance, 111);
 	}
 

@@ -22,8 +22,8 @@ import net.minecraft.command.CommandSource;
 
 import net.mcreator.starcraftvalley.gui.StarminSkillsGui;
 import net.mcreator.starcraftvalley.gui.StarminGuiGui;
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutModVariables;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -35,32 +35,32 @@ public class StarAdminPProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure StarAdminP!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure StarAdminP!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure StarAdminP!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure StarAdminP!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure StarAdminP!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure StarAdminP!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure StarAdminP!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure StarAdminP!");
 			return;
 		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency entity for procedure StarAdminP!");
+				SproutMod.LOGGER.warn("Failed to load dependency entity for procedure StarAdminP!");
 			return;
 		}
 		if (dependencies.get("cmdparams") == null) {
 			if (!dependencies.containsKey("cmdparams"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency cmdparams for procedure StarAdminP!");
+				SproutMod.LOGGER.warn("Failed to load dependency cmdparams for procedure StarAdminP!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
@@ -120,14 +120,14 @@ public class StarAdminPProcedure {
 							.handleCommand(new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(), "time set 1d");
 				}
-				StarcraftvalleyModVariables.MapVariables.get(world).TotalDays = 1;
-				StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
-				StarcraftvalleyModVariables.MapVariables.get(world).year = 0;
-				StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
-				StarcraftvalleyModVariables.MapVariables.get(world).season = 0;
-				StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
-				StarcraftvalleyModVariables.MapVariables.get(world).day = 1;
-				StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
+				SproutModVariables.MapVariables.get(world).TotalDays = 1;
+				SproutModVariables.MapVariables.get(world).syncData(world);
+				SproutModVariables.MapVariables.get(world).year = 0;
+				SproutModVariables.MapVariables.get(world).syncData(world);
+				SproutModVariables.MapVariables.get(world).season = 0;
+				SproutModVariables.MapVariables.get(world).syncData(world);
+				SproutModVariables.MapVariables.get(world).day = 1;
+				SproutModVariables.MapVariables.get(world).syncData(world);
 			} else if ((new Object() {
 				public String getText() {
 					String param = (String) cmdparams.get("1");
@@ -155,7 +155,7 @@ public class StarAdminPProcedure {
 							return "";
 						}
 					}.getText()).equals("")) {
-						StarcraftvalleyModVariables.MapVariables.get(world).season = new Object() {
+						SproutModVariables.MapVariables.get(world).season = new Object() {
 							double convert(String s) {
 								try {
 									return Double.parseDouble(s.trim());
@@ -172,7 +172,7 @@ public class StarAdminPProcedure {
 								return "";
 							}
 						}.getText());
-						StarcraftvalleyModVariables.MapVariables.get(world).syncData(world);
+						SproutModVariables.MapVariables.get(world).syncData(world);
 					}
 				}
 			}

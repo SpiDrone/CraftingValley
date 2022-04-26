@@ -1,7 +1,0 @@
-{
-  "parent": "block/crop",
-  "textures": {
-    "crop": "starcraftvalley:blocks/trellis",
-    "particle": "starcraftvalley:blocks/trellis"
-  }
-}

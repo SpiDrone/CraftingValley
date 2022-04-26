@@ -56,7 +56,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.starcraftvalley.procedures.BreakCheckProcedure;
 import net.mcreator.starcraftvalley.item.ParsnipSeedsItem;
-import net.mcreator.starcraftvalley.StarcraftvalleyModElements;
+import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
 
@@ -68,14 +68,14 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@StarcraftvalleyModElements.ModElement.Tag
-public class ParsnipS2Block extends StarcraftvalleyModElements.ModElement {
-	@ObjectHolder("starcraftvalley:parsnip_s_2")
+@SproutModElements.ModElement.Tag
+public class ParsnipS2Block extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:parsnip_s_2")
 	public static final Block block = null;
-	@ObjectHolder("starcraftvalley:parsnip_s_2")
+	@ObjectHolder("sprout:parsnip_s_2")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public ParsnipS2Block(StarcraftvalleyModElements instance) {
+	public ParsnipS2Block(SproutModElements instance) {
 		super(instance, 87);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

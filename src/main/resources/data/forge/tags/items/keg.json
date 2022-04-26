@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "starcraftvalley:tea_leaves",
-    "starcraftvalley:coffee_bean"
+    "sprout:tea_leaves",
+    "sprout:coffee_bean"
   ]
 }

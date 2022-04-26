@@ -23,8 +23,8 @@ import net.minecraft.block.BlockState;
 import net.mcreator.starcraftvalley.item.TeaLeavesItem;
 import net.mcreator.starcraftvalley.item.CoffeeBeanItem;
 import net.mcreator.starcraftvalley.block.KegProcessingBlock;
-import net.mcreator.starcraftvalley.StarcraftvalleyModVariables;
-import net.mcreator.starcraftvalley.StarcraftvalleyMod;
+import net.mcreator.starcraftvalley.SproutModVariables;
+import net.mcreator.starcraftvalley.SproutMod;
 
 import java.util.Map;
 
@@ -33,27 +33,27 @@ public class FillKegProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency world for procedure FillKeg!");
+				SproutMod.LOGGER.warn("Failed to load dependency world for procedure FillKeg!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency x for procedure FillKeg!");
+				SproutMod.LOGGER.warn("Failed to load dependency x for procedure FillKeg!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency y for procedure FillKeg!");
+				SproutMod.LOGGER.warn("Failed to load dependency y for procedure FillKeg!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency z for procedure FillKeg!");
+				SproutMod.LOGGER.warn("Failed to load dependency z for procedure FillKeg!");
 			return;
 		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				StarcraftvalleyMod.LOGGER.warn("Failed to load dependency entity for procedure FillKeg!");
+				SproutMod.LOGGER.warn("Failed to load dependency entity for procedure FillKeg!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
@@ -119,7 +119,7 @@ public class FillKegProcedure {
 						TileEntity _tileEntity = world.getTileEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("dayFilled", StarcraftvalleyModVariables.MapVariables.get(world).TotalDays);
+							_tileEntity.getTileData().putDouble("dayFilled", SproutModVariables.MapVariables.get(world).TotalDays);
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
@@ -175,7 +175,7 @@ public class FillKegProcedure {
 						TileEntity _tileEntity = world.getTileEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("dayFilled", StarcraftvalleyModVariables.MapVariables.get(world).TotalDays);
+							_tileEntity.getTileData().putDouble("dayFilled", SproutModVariables.MapVariables.get(world).TotalDays);
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
