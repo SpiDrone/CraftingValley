@@ -1,0 +1,8 @@
+{
+  "parent": "starcraftvalley:custom/sprinkler",
+  "textures": {
+    "all": "starcraftvalley:blocks/sprinkler",
+    "particle": "starcraftvalley:blocks/sprinkler",
+    "0": "starcraftvalley:blocks/sprinkler"
+  }
+}

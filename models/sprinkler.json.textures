@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "sprinkler"
+      },
+      "name": "default"
+    },
+    "sprinkler2": {
+      "map": {
+        "0": "sprinkler2"
+      },
+      "name": "sprinkler2"
+    },
+    "sprinkler3": {
+      "map": {
+        "0": "sprinkler3"
+      },
+      "name": "sprinkler3"
+    }
+  }
+}

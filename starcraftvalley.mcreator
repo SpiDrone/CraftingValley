@@ -1926,6 +1926,149 @@
       "locked_code": false,
       "registry_name": "wheat_s_4",
       "path": "~/Crops/Other/Wheat"
+    },
+    {
+      "name": "SprinklerS1",
+      "type": "block",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_s_1",
+      "path": "~/Processing/Sprinkler"
+    },
+    {
+      "name": "SprinklerS2",
+      "type": "block",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_s_2",
+      "path": "~/Processing/Sprinkler"
+    },
+    {
+      "name": "SprinklerS3",
+      "type": "block",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_s_3",
+      "path": "~/Processing/Sprinkler"
+    },
+    {
+      "name": "Sprinkler",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Processing/Sprinkler"
+    },
+    {
+      "name": "SprinkleCall",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkle_call",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Processing/Sprinkler"
+    },
+    {
+      "name": "SprinklePlace",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkle_place",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Processing/Sprinkler"
+    },
+    {
+      "name": "SprinklerModular",
+      "type": "procedure",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_modular",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Processing/Sprinkler"
     }
   ],
   "variable_elements": [
@@ -1997,8 +2140,8 @@
       "block.starcraftvalley.potato_s_2": "Potato Stalk",
       "block.starcraftvalley.potato_s_3": "Potato Stalk",
       "block.starcraftvalley.tea_s_1": "Tea Plant",
-      "block.starcraftvalley.tea_s_2": "Tea Plant",
       "item.starcraftvalley.pickaxebasic": "Pickaxebasic [B]",
+      "block.starcraftvalley.tea_s_2": "Tea Plant",
       "block.starcraftvalley.tea_s_3": "Tea Plant",
       "block.starcraftvalley.tea_s_4": "Tea Plant",
       "item.starcraftvalley.tea": "Tea",
@@ -2007,9 +2150,12 @@
       "block.starcraftvalley.cauliflower_s_1": "Cauliflower",
       "block.starcraftvalley.cauliflower_s_2": "Cauliflower",
       "block.starcraftvalley.keg_processing": "Keg",
+      "block.starcraftvalley.sprinkler_s_1": "Sprinkler",
       "block.starcraftvalley.cauliflower_s_3": "Cauliflower",
       "item.starcraftvalley.strawberry": "Strawberry",
+      "block.starcraftvalley.sprinkler_s_2": "Sprinkler",
       "block.starcraftvalley.cauliflower_s_4": "Cauliflower",
+      "block.starcraftvalley.sprinkler_s_3": "Sprinkler",
       "block.starcraftvalley.potato_s_1": "Potato Stalk",
       "item.starcraftvalley.cauliflower_seeds": "Cauliflower Seeds",
       "item.starcraftvalley.wheat": "Wheat",
@@ -2169,6 +2315,10 @@
           },
           {
             "name": "ShippingBin",
+            "children": []
+          },
+          {
+            "name": "Sprinkler",
             "children": []
           }
         ]

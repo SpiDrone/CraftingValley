@@ -1,0 +1,227 @@
+{
+  "_fv": 27,
+  "_type": "block",
+  "definition": {
+    "texture": "sprinkler2",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 2,
+    "customModelName": "sprinkler:sprinkler2",
+    "rotationMode": 0,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": true,
+    "connectedSides": false,
+    "transparencyType": "CUTOUT",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 6.0,
+        "my": 0.0,
+        "mz": 6.0,
+        "Mx": 10.0,
+        "My": 8.0,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 5.0,
+        "my": 4.0,
+        "mz": 5.0,
+        "Mx": 11.0,
+        "My": 7.0,
+        "Mz": 11.0,
+        "subtract": false
+      },
+      {
+        "mx": 3.0,
+        "my": 4.5,
+        "mz": 7.0,
+        "Mx": 5.0,
+        "My": 6.5,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 2.0,
+        "my": 3.5,
+        "mz": 6.0,
+        "Mx": 3.0,
+        "My": 7.5,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 11.0,
+        "my": 4.5,
+        "mz": 7.0,
+        "Mx": 13.0,
+        "My": 6.5,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 13.0,
+        "my": 3.5,
+        "mz": 6.0,
+        "Mx": 14.0,
+        "My": 7.5,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 7.0,
+        "my": 4.5,
+        "mz": 3.0,
+        "Mx": 9.0,
+        "My": 6.5,
+        "Mz": 5.0,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 3.5,
+        "mz": 2.0,
+        "Mx": 10.0,
+        "My": 7.5,
+        "Mz": 3.0,
+        "subtract": false
+      },
+      {
+        "mx": 7.0,
+        "my": 4.5,
+        "mz": 11.0,
+        "Mx": 9.0,
+        "My": 6.5,
+        "Mz": 13.0,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 3.5,
+        "mz": 13.0,
+        "Mx": 10.0,
+        "My": 7.5,
+        "Mz": 14.0,
+        "subtract": false
+      }
+    ],
+    "name": "Sprinkler",
+    "specialInfo": [],
+    "hardness": 0.8,
+    "resistance": 3.0,
+    "hasGravity": false,
+    "isWaterloggable": false,
+    "creativeTab": {
+      "value": "CUSTOM:Tabblocks"
+    },
+    "destroyTool": "pickaxe",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "useLootTableForDrops": false,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "lightOpacity": 0,
+    "material": {
+      "value": "IRON"
+    },
+    "tickRate": 40,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "NORMAL",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "METAL"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": 0,
+    "unbreakable": false,
+    "breakHarvestLevel": 0,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "EXPLOSION_NORMAL"
+    },
+    "particleSpawningShape": "Spread",
+    "particleSpawningRadious": 0.5,
+    "particleAmount": 4,
+    "hasInventory": true,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 0,
+    "inventoryStackSize": 64,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "SprinklePlace"
+    },
+    "onTickUpdate": {
+      "name": "SprinklerModular"
+    },
+    "onBlockPlayedBy": {
+      "name": "SprinklePlace"
+    },
+    "spawnWorldTypes": [],
+    "restrictionBiomes": [],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.STONE"
+      }
+    ],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}
