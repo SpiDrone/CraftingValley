@@ -33,6 +33,12 @@
       },
       {
         "value": "CUSTOM:CabbageRed"
+      },
+      {
+        "value": "CUSTOM:Wheat"
+      },
+      {
+        "value": "CUSTOM:Potato"
       }
     ],
     "blocks": [],

@@ -1,0 +1,7 @@
+{
+  "parent": "sprout:custom/watering_can",
+  "textures": {
+    "missing": "sprout:blocks/stone_watering_can",
+    "particle": "sprout:items/beer_blue"
+  }
+}

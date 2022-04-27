@@ -2069,6 +2069,86 @@
         ]
       },
       "path": "~/Processing/Sprinkler"
+    },
+    {
+      "name": "Pressurerange",
+      "type": "item",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressurerange",
+      "path": "~/Processing/Sprinkler"
+    },
+    {
+      "name": "SprinklerrangeUp",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinklerrange_up",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Processing/Sprinkler"
+    },
+    {
+      "name": "Wateringcan1",
+      "type": "item",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wateringcan_1",
+      "path": "~/Tools"
+    },
+    {
+      "name": "NoMoreLivestock",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_more_livestock",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Potato",
+      "type": "food",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potato",
+      "path": "~/Crops/Spring/Potato"
     }
   ],
   "variable_elements": [
@@ -2211,6 +2291,7 @@
       "block.sprout.cabbage_red_s_5": "Red Cabbage",
       "item.starcraftvalley.pepper": "Pepper",
       "block.sprout.shippingbin": "Shippingbin",
+      "item.sprout.wateringcan_1": "Watering Can",
       "block.sprout.cabbage_red_s_2": "Red Cabbage",
       "block.sprout.cabbage_red_s_3": "Red Cabbage",
       "block.sprout.cabbage_red_s_1": "Red Cabbage",
@@ -2236,9 +2317,11 @@
       "item.sprout.watering_can": "Watering Can (default)",
       "block.starcraftvalley.s": "Parsnip",
       "item.sprout.pickaxebasic": "Pickaxebasic [B]",
+      "item.sprout.potato": "Strawberry",
       "item.starcraftvalley.tea_seeds": "Tea Sapling",
       "item.sprout.strawberry": "Strawberry",
       "item.starcraftvalley.tea_leaves": "Tea",
+      "item.sprout.pressurerange": "Pressure Upgrade",
       "block.sprout.cauliflower_s_4": "Cauliflower",
       "block.sprout.cauliflower_s_3": "Cauliflower",
       "block.sprout.cauliflower_s_2": "Cauliflower",

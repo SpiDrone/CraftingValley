@@ -9,7 +9,9 @@
     "sprout:grapes",
     "sprout:cauliflower",
     "sprout:coffee_bean",
+    "sprout:wheat",
     "sprout:strawberry",
-    "sprout:coffee"
+    "sprout:coffee",
+    "sprout:potato"
   ]
 }

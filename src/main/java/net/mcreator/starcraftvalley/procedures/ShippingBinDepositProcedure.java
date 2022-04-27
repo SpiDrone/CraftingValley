@@ -2,7 +2,6 @@ package net.mcreator.starcraftvalley.procedures;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
@@ -11,6 +10,7 @@ import net.mcreator.starcraftvalley.item.WheatItem;
 import net.mcreator.starcraftvalley.item.TeaLeavesItem;
 import net.mcreator.starcraftvalley.item.TeaItem;
 import net.mcreator.starcraftvalley.item.StrawberryItem;
+import net.mcreator.starcraftvalley.item.PotatoItem;
 import net.mcreator.starcraftvalley.item.PepperItem;
 import net.mcreator.starcraftvalley.item.ParsnipItem;
 import net.mcreator.starcraftvalley.item.GrapesItem;
@@ -63,7 +63,7 @@ public class ShippingBinDepositProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			} else if (Items.POTATO == (item).getItem()) {
+			} else if (PotatoItem.block == (item).getItem()) {
 				{
 					double _setval = ((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SproutModVariables.PlayerVariables())).shippingBin + 50);
@@ -117,19 +117,19 @@ public class ShippingBinDepositProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			} else if (CabbageRedItem.block == (item).getItem()) {
+			} else if (PepperItem.block == (item).getItem()) {
 				{
 					double _setval = ((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new SproutModVariables.PlayerVariables())).shippingBin + 130);
+							.orElse(new SproutModVariables.PlayerVariables())).shippingBin + 66);
 					entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.shippingBin = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			} else if (PepperItem.block == (item).getItem()) {
+			} else if (CabbageRedItem.block == (item).getItem()) {
 				{
 					double _setval = ((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new SproutModVariables.PlayerVariables())).shippingBin + 66);
+							.orElse(new SproutModVariables.PlayerVariables())).shippingBin + 130);
 					entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.shippingBin = _setval;
 						capability.syncPlayerVariables(entity);

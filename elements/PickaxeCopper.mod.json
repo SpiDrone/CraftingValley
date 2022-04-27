@@ -25,6 +25,9 @@
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "WateringSoilPlant"
+    },
     "onItemInInventoryTick": {
       "name": "RemoveEnchantments"
     }
