@@ -22,6 +22,7 @@ import net.minecraft.command.CommandSource;
 
 import net.mcreator.starcraftvalley.gui.StarminSkillsGui;
 import net.mcreator.starcraftvalley.gui.StarminGuiGui;
+import net.mcreator.starcraftvalley.gui.AsGui;
 import net.mcreator.starcraftvalley.SproutModVariables;
 import net.mcreator.starcraftvalley.SproutMod;
 
@@ -268,6 +269,32 @@ public class StarAdminPProcedure {
 						@Override
 						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
 							return new StarminSkillsGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		} else if ((new Object() {
+			public String getText() {
+				String param = (String) cmdparams.get("0");
+				if (param != null) {
+					return param;
+				}
+				return "";
+			}
+		}.getText()).equals("shop")) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("As");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new AsGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

@@ -2149,6 +2149,141 @@
       "locked_code": false,
       "registry_name": "potato",
       "path": "~/Crops/Spring/Potato"
+    },
+    {
+      "name": "As",
+      "type": "gui",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "as",
+      "path": "~/Guis"
+    },
+    {
+      "name": "ShopFill",
+      "type": "procedure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shop_fill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Guis"
+    },
+    {
+      "name": "Purchase00",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purchase_00",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Guis"
+    },
+    {
+      "name": "Purchase01",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purchase_01",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Guis"
+    },
+    {
+      "name": "Purchase02",
+      "type": "procedure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purchase_02",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Guis"
+    },
+    {
+      "name": "Purchase03",
+      "type": "procedure",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purchase_03",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Guis"
+    },
+    {
+      "name": "StrawberryRename",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strawberry_rename",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Crops/Seeds"
     }
   ],
   "variable_elements": [
@@ -2480,6 +2615,10 @@
       },
       {
         "name": "FoodItems",
+        "children": []
+      },
+      {
+        "name": "Guis",
         "children": []
       }
     ]

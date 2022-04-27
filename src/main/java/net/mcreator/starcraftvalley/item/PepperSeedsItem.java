@@ -43,7 +43,7 @@ public class PepperSeedsItem extends SproutModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(TabseedsItemGroup.tab).maxStackSize(32).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(TabseedsItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("pepper_seeds");
 		}
 

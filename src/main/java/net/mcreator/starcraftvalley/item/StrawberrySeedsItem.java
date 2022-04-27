@@ -14,9 +14,11 @@ import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.starcraftvalley.procedures.StrawberryRenameProcedure;
 import net.mcreator.starcraftvalley.procedures.SpringSeedsPlantProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabseedsItemGroup;
 import net.mcreator.starcraftvalley.SproutModElements;
@@ -43,7 +45,7 @@ public class StrawberrySeedsItem extends SproutModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(TabseedsItemGroup.tab).maxStackSize(32).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(TabseedsItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("strawberry_seeds");
 		}
 
@@ -87,6 +89,18 @@ public class StrawberrySeedsItem extends SproutModElements.ModElement {
 							new AbstractMap.SimpleEntry<>("itemstack", itemstack))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
+		}
+
+		@Override
+		public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+
+			StrawberryRenameProcedure.executeProcedure(
+					Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }
