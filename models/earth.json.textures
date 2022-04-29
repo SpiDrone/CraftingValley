@@ -11,6 +11,12 @@
         "0": "tilledwetearth"
       },
       "name": "wet"
+    },
+    "wetf": {
+      "map": {
+        "0": "tilledwetearthf"
+      },
+      "name": "wetf"
     }
   }
 }

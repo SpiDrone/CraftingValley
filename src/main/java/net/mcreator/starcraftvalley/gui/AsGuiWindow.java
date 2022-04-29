@@ -58,7 +58,19 @@ public class AsGuiWindow extends ContainerScreen<AsGui.GuiContainerMod> {
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sprout:textures/seedshop2.png"));
-		this.blit(ms, this.guiLeft + -2, this.guiTop + -1, 0, 0, 200, 180, 200, 180);
+		this.blit(ms, this.guiLeft + 0, this.guiTop + 0, 0, 0, 200, 180, 200, 180);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sprout:textures/parsnip_seed.png"));
+		this.blit(ms, this.guiLeft + 52, this.guiTop + 10, 0, 0, 16, 16, 16, 16);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sprout:textures/cauli_flower_seeds.png"));
+		this.blit(ms, this.guiLeft + 9, this.guiTop + 52, 0, 0, 16, 16, 16, 16);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sprout:textures/strawberry_seeds.png"));
+		this.blit(ms, this.guiLeft + 9, this.guiTop + 10, 0, 0, 16, 16, 16, 16);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sprout:textures/potato_seeds.png"));
+		this.blit(ms, this.guiLeft + 9, this.guiTop + 31, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}

@@ -52,14 +52,33 @@ public class HarvestStrawberryProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
+		ItemStack item = ItemStack.EMPTY;
+		String quality = "";
+		item = new ItemStack(StrawberryItem.block);
+		if (Math.random() < 0.05 && (entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new SproutModVariables.PlayerVariables())).FarmingLvl >= 5) {
+			(item).getOrCreateTag().putString("quality", "Quality: \u00A7d\u2605\u2605\u2605");
+		} else if (Math.random() < 0.2) {
+			(item).getOrCreateTag().putString("quality", "Quality: \u00A76\u2605\u2605");
+		} else if (Math.random() < 0.2) {
+			(item).getOrCreateTag().putString("quality", "Quality: \u00A77\u2605");
+		}
 		if (entity instanceof PlayerEntity) {
-			ItemStack _setstack = new ItemStack(StrawberryItem.block);
+			ItemStack _setstack = (item);
 			_setstack.setCount((int) 1);
 			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 		}
 		if (Math.random() < 0.02) {
+			if (Math.random() < 0.05 && (entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new SproutModVariables.PlayerVariables())).FarmingLvl >= 5) {
+				(item).getOrCreateTag().putString("quality", "Prestige");
+			} else if (Math.random() < 0.2) {
+				(item).getOrCreateTag().putString("quality", "Gold");
+			} else if (Math.random() < 0.2) {
+				(item).getOrCreateTag().putString("quality", "Silver");
+			}
 			if (entity instanceof PlayerEntity) {
-				ItemStack _setstack = new ItemStack(StrawberryItem.block);
+				ItemStack _setstack = (item);
 				_setstack.setCount((int) 1);
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}

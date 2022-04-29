@@ -2,14 +2,14 @@
   "_fv": 27,
   "_type": "block",
   "definition": {
-    "texture": "tilledearth",
+    "texture": "tilledwetearthf",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "earth:default",
+    "customModelName": "earth:wetf",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -39,7 +39,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Tabblocks"
+      "value": "No creative tab entry"
     },
     "destroyTool": "shovel",
     "customDrop": {
@@ -54,7 +54,7 @@
     "material": {
       "value": "EARTH"
     },
-    "tickRate": 50,
+    "tickRate": 20,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -109,8 +109,8 @@
     "openGUIOnRightClick": false,
     "inventorySize": 0,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -121,11 +121,14 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "PlaceWatered"
+    },
     "onNeighbourBlockChanges": {
       "name": "RevertToDirt"
     },
     "onTickUpdate": {
-      "name": "CropDecay"
+      "name": "WetEarthUpdate"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

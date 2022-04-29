@@ -230,6 +230,8 @@ public class SproutModVariables {
 			nbt.putDouble("FarmingPrestige", instance.FarmingPrestige);
 			nbt.putBoolean("TempOverlay", instance.TempOverlay);
 			nbt.putDouble("shippingBin", instance.shippingBin);
+			nbt.putDouble("proficiencyFarm", instance.proficiencyFarm);
+			nbt.putDouble("dailyLuck", instance.dailyLuck);
 			return nbt;
 		}
 
@@ -242,6 +244,8 @@ public class SproutModVariables {
 			instance.FarmingPrestige = nbt.getDouble("FarmingPrestige");
 			instance.TempOverlay = nbt.getBoolean("TempOverlay");
 			instance.shippingBin = nbt.getDouble("shippingBin");
+			instance.proficiencyFarm = nbt.getDouble("proficiencyFarm");
+			instance.dailyLuck = nbt.getDouble("dailyLuck");
 		}
 	}
 
@@ -252,6 +256,8 @@ public class SproutModVariables {
 		public double FarmingPrestige = 0;
 		public boolean TempOverlay = false;
 		public double shippingBin = 0;
+		public double proficiencyFarm = 0;
+		public double dailyLuck = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -291,7 +297,9 @@ public class SproutModVariables {
 		clone.FarmingPrestige = original.FarmingPrestige;
 		clone.TempOverlay = original.TempOverlay;
 		clone.shippingBin = original.shippingBin;
+		clone.dailyLuck = original.dailyLuck;
 		if (!event.isWasDeath()) {
+			clone.proficiencyFarm = original.proficiencyFarm;
 		}
 	}
 
@@ -323,6 +331,8 @@ public class SproutModVariables {
 					variables.FarmingPrestige = message.data.FarmingPrestige;
 					variables.TempOverlay = message.data.TempOverlay;
 					variables.shippingBin = message.data.shippingBin;
+					variables.proficiencyFarm = message.data.proficiencyFarm;
+					variables.dailyLuck = message.data.dailyLuck;
 				}
 			});
 			context.setPacketHandled(true);

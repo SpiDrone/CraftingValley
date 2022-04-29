@@ -4,8 +4,6 @@ package net.mcreator.starcraftvalley.item;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
@@ -15,25 +13,23 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.starcraftvalley.procedures.WateringSoilPlantProcedure;
+import net.mcreator.starcraftvalley.procedures.FertilizerUseProcedure;
 import net.mcreator.starcraftvalley.SproutModElements;
 
 import java.util.stream.Stream;
 import java.util.Map;
-import java.util.List;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
 @SproutModElements.ModElement.Tag
-public class WateringCanItem extends SproutModElements.ModElement {
-	@ObjectHolder("sprout:watering_can")
+public class FertilizerSpeed2Item extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:fertilizer_speed_2")
 	public static final Item block = null;
 
-	public WateringCanItem(SproutModElements instance) {
-		super(instance, 34);
+	public FertilizerSpeed2Item(SproutModElements instance) {
+		super(instance, 164);
 	}
 
 	@Override
@@ -43,8 +39,8 @@ public class WateringCanItem extends SproutModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("watering_can");
+			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(32).rarity(Rarity.UNCOMMON));
+			setRegistryName("fertilizer_speed_2");
 		}
 
 		@Override
@@ -63,12 +59,6 @@ public class WateringCanItem extends SproutModElements.ModElement {
 		}
 
 		@Override
-		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
-			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Water Level | 16/16"));
-		}
-
-		@Override
 		public ActionResultType onItemUseFirst(ItemStack stack, ItemUseContext context) {
 			ActionResultType retval = super.onItemUseFirst(stack, context);
 			World world = context.getWorld();
@@ -81,9 +71,10 @@ public class WateringCanItem extends SproutModElements.ModElement {
 			int z = pos.getZ();
 			ItemStack itemstack = context.getItem();
 
-			WateringSoilPlantProcedure.executeProcedure(Stream
+			FertilizerUseProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z))
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity),
+							new AbstractMap.SimpleEntry<>("itemstack", itemstack))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}

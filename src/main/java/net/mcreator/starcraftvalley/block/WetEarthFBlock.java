@@ -41,7 +41,6 @@ import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -52,9 +51,9 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.starcraftvalley.procedures.WetEarthUpdateProcedure;
 import net.mcreator.starcraftvalley.procedures.RevertToDirtProcedure;
-import net.mcreator.starcraftvalley.procedures.CropDecayProcedure;
-import net.mcreator.starcraftvalley.itemgroup.TabblocksItemGroup;
+import net.mcreator.starcraftvalley.procedures.PlaceWateredProcedure;
 import net.mcreator.starcraftvalley.SproutModElements;
 
 import javax.annotation.Nullable;
@@ -69,27 +68,27 @@ import java.util.Collections;
 import java.util.AbstractMap;
 
 @SproutModElements.ModElement.Tag
-public class TilledEarthBlock extends SproutModElements.ModElement {
-	@ObjectHolder("sprout:tilled_earth")
+public class WetEarthFBlock extends SproutModElements.ModElement {
+	@ObjectHolder("sprout:wet_earth_f")
 	public static final Block block = null;
-	@ObjectHolder("sprout:tilled_earth")
+	@ObjectHolder("sprout:wet_earth_f")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public TilledEarthBlock(SproutModElements instance) {
-		super(instance, 4);
+	public WetEarthFBlock(SproutModElements instance) {
+		super(instance, 165);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(TabblocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
 
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("tilled_earth"));
+			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("wet_earth_f"));
 		}
 	}
 
@@ -103,7 +102,7 @@ public class TilledEarthBlock extends SproutModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(0.5f, 1f).setLightLevel(s -> 0)
 					.harvestLevel(0).harvestTool(ToolType.SHOVEL).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
-			setRegistryName("tilled_earth");
+			setRegistryName("wet_earth_f");
 		}
 
 		@Override
@@ -140,7 +139,12 @@ public class TilledEarthBlock extends SproutModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(pos, this, 50);
+			world.getPendingBlockTicks().scheduleTick(pos, this, 20);
+
+			PlaceWateredProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -166,11 +170,11 @@ public class TilledEarthBlock extends SproutModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 
-			CropDecayProcedure.executeProcedure(Stream
+			WetEarthUpdateProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-			world.getPendingBlockTicks().scheduleTick(pos, this, 50);
+			world.getPendingBlockTicks().scheduleTick(pos, this, 20);
 		}
 
 		@Override
@@ -194,33 +198,6 @@ public class TilledEarthBlock extends SproutModElements.ModElement {
 			super.eventReceived(state, world, pos, eventID, eventParam);
 			TileEntity tileentity = world.getTileEntity(pos);
 			return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
-		}
-
-		@Override
-		public void onReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean isMoving) {
-			if (state.getBlock() != newState.getBlock()) {
-				TileEntity tileentity = world.getTileEntity(pos);
-				if (tileentity instanceof CustomTileEntity) {
-					InventoryHelper.dropInventoryItems(world, pos, (CustomTileEntity) tileentity);
-					world.updateComparatorOutputLevel(pos, this);
-				}
-
-				super.onReplaced(state, world, pos, newState, isMoving);
-			}
-		}
-
-		@Override
-		public boolean hasComparatorInputOverride(BlockState state) {
-			return true;
-		}
-
-		@Override
-		public int getComparatorInputOverride(BlockState blockState, World world, BlockPos pos) {
-			TileEntity tileentity = world.getTileEntity(pos);
-			if (tileentity instanceof CustomTileEntity)
-				return Container.calcRedstoneFromInventory((CustomTileEntity) tileentity);
-			else
-				return 0;
 		}
 	}
 
@@ -279,7 +256,7 @@ public class TilledEarthBlock extends SproutModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("tilled_earth");
+			return new StringTextComponent("wet_earth_f");
 		}
 
 		@Override

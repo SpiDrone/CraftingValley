@@ -197,8 +197,48 @@
           "image": "seedshop2.png",
           "use1Xscale": false,
           "name": "seedshop2.png",
-          "x": 111,
-          "y": 29
+          "x": 113,
+          "y": 30
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "parsnip_seed.png",
+          "use1Xscale": false,
+          "name": "parsnip_seed.png",
+          "x": 166,
+          "y": 40
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "cauli_flower_seeds.png",
+          "use1Xscale": false,
+          "name": "cauli_flower_seeds.png",
+          "x": 123,
+          "y": 82
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "strawberry_seeds.png",
+          "use1Xscale": false,
+          "name": "strawberry_seeds.png",
+          "x": 123,
+          "y": 40
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "potato_seeds.png",
+          "use1Xscale": false,
+          "name": "potato_seeds.png",
+          "x": 123,
+          "y": 61
         }
       }
     ],

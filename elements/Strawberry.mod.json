@@ -7,7 +7,9 @@
     "customModelName": "Normal",
     "name": "Strawberry",
     "rarity": "COMMON",
-    "specialInfo": [],
+    "specialInfo": [
+      "Quality:"
+    ],
     "creativeTab": {
       "value": "CUSTOM:Tabcrops"
     },

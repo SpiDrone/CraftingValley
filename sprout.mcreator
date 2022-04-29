@@ -113,7 +113,7 @@
       "type": "food",
       "sortid": 14,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "strawberry",
       "path": "~/Crops/Spring/Strawberry"
     },
@@ -319,15 +319,6 @@
           }
         ]
       },
-      "path": "~/Tools"
-    },
-    {
-      "name": "WateringCan",
-      "type": "item",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "watering_can",
       "path": "~/Tools"
     },
     {
@@ -2284,6 +2275,70 @@
         ]
       },
       "path": "~/Crops/Seeds"
+    },
+    {
+      "name": "Fertilizerspeed1",
+      "type": "item",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fertilizerspeed_1",
+      "path": "~/Soil/Fertilizer"
+    },
+    {
+      "name": "FertilizerUse",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fertilizer_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Soil/Fertilizer"
+    },
+    {
+      "name": "FertilizerSpeed2",
+      "type": "item",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fertilizer_speed_2",
+      "path": "~/Soil/Fertilizer"
+    },
+    {
+      "name": "WetEarthF",
+      "type": "block",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wet_earth_f",
+      "path": "~/Soil"
     }
   ],
   "variable_elements": [
@@ -2343,6 +2398,18 @@
     },
     {
       "name": "shippingBin",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "proficiencyFarm",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "dailyLuck",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -2422,6 +2489,7 @@
       "item.sprout.strawberry_seeds": "Strawberry Seeds",
       "item.sprout.tea_leaves": "Tea",
       "block.sprout.parsnip_s_4": "Parsnip",
+      "item.sprout.fertilizer_speed_2": "Speed Grow",
       "block.sprout.cabbage_red_s_4": "Red Cabbage",
       "block.sprout.cabbage_red_s_5": "Red Cabbage",
       "item.starcraftvalley.pepper": "Pepper",
@@ -2449,12 +2517,12 @@
       "item.starcraftvalley.parsnip": "Parsnip",
       "block.starcraftvalley.potato_s_1": "Potato Stalk",
       "item.starcraftvalley.cauliflower_seeds": "Cauliflower Seeds",
-      "item.sprout.watering_can": "Watering Can (default)",
       "block.starcraftvalley.s": "Parsnip",
       "item.sprout.pickaxebasic": "Pickaxebasic [B]",
       "item.sprout.potato": "Strawberry",
       "item.starcraftvalley.tea_seeds": "Tea Sapling",
       "item.sprout.strawberry": "Strawberry",
+      "item.sprout.fertilizerspeed_1": "Speed Grow",
       "item.starcraftvalley.tea_leaves": "Tea",
       "item.sprout.pressurerange": "Pressure Upgrade",
       "block.sprout.cauliflower_s_4": "Cauliflower",
@@ -2478,6 +2546,7 @@
       "item.sprout.pickaxe_copper": "Pickaxe [C]",
       "block.starcraftvalley.coffee_s_3": "Coffee Tree",
       "item.sprout.cauliflower_seeds": "Cauliflower Seeds",
+      "block.sprout.wet_earth_f": "Tilled Earth",
       "item.starcraftvalley.strawberry_seeds": "Strawberry Seeds",
       "block.starcraftvalley.coffee_s_4": "Coffee Tree",
       "block.starcraftvalley.cabbage_red_s_1": "Red Cabbage",
@@ -2517,7 +2586,12 @@
       },
       {
         "name": "Soil",
-        "children": []
+        "children": [
+          {
+            "name": "Fertilizer",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Tags",

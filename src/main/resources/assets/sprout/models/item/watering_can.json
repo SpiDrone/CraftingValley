@@ -1,6 +1,0 @@
-{
-  "parent": "sprout:custom/wateringcan",
-  "textures": {
-    "particle": "sprout:items/strawberry"
-  }
-}
