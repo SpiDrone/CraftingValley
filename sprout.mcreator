@@ -109,15 +109,6 @@
       "path": "~/Crops/Spring/Strawberry"
     },
     {
-      "name": "Strawberry",
-      "type": "food",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "strawberry",
-      "path": "~/Crops/Spring/Strawberry"
-    },
-    {
       "name": "PotatoS1",
       "type": "block",
       "sortid": 15,
@@ -710,15 +701,6 @@
       "path": "~/Crops/Other/Tea"
     },
     {
-      "name": "Cauliflower",
-      "type": "food",
-      "sortid": 59,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cauliflower",
-      "path": "~/Crops/Spring/Cauliflower"
-    },
-    {
       "name": "HarvestCauliflower",
       "type": "procedure",
       "sortid": 60,
@@ -930,24 +912,6 @@
       "path": "~/Crops/Seeds"
     },
     {
-      "name": "Pepper",
-      "type": "food",
-      "sortid": 72,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pepper",
-      "path": "~/Crops/Summer/Pepper"
-    },
-    {
-      "name": "Grapes",
-      "type": "food",
-      "sortid": 73,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grapes",
-      "path": "~/Crops/Fall/Grapes"
-    },
-    {
       "name": "PepperSeeds",
       "type": "item",
       "sortid": 74,
@@ -1148,15 +1112,6 @@
       "path": "~/Crops/Spring/Parsnip"
     },
     {
-      "name": "Parsnip",
-      "type": "food",
-      "sortid": 83,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parsnip",
-      "path": "~/Crops/Spring/Parsnip"
-    },
-    {
       "name": "S",
       "type": "block",
       "sortid": 84,
@@ -1311,15 +1266,6 @@
           }
         ]
       },
-      "path": "~/FoodItems"
-    },
-    {
-      "name": "Coffee",
-      "type": "food",
-      "sortid": 100,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "coffee",
       "path": "~/FoodItems"
     },
     {
@@ -1521,15 +1467,6 @@
       "path": "~/Crops/Other/Tea"
     },
     {
-      "name": "Tea",
-      "type": "food",
-      "sortid": 111,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tea",
-      "path": "~/FoodItems"
-    },
-    {
       "name": "StarminGuiB3",
       "type": "procedure",
       "sortid": 112,
@@ -1720,15 +1657,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "cabbage_red_s_1",
-      "path": "~/Crops/Summer/CabbageR"
-    },
-    {
-      "name": "CabbageRed",
-      "type": "food",
-      "sortid": 126,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cabbage_red",
       "path": "~/Crops/Summer/CabbageR"
     },
     {
@@ -2133,15 +2061,6 @@
       }
     },
     {
-      "name": "Potato",
-      "type": "food",
-      "sortid": 154,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "potato",
-      "path": "~/Crops/Spring/Potato"
-    },
-    {
       "name": "As",
       "type": "gui",
       "sortid": 155,
@@ -2339,6 +2258,338 @@
       "locked_code": false,
       "registry_name": "wet_earth_f",
       "path": "~/Soil"
+    },
+    {
+      "name": "CropQuality",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crop_quality",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crops"
+    },
+    {
+      "name": "Strawberry",
+      "type": "item",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strawberry",
+      "path": "~/Crops/Spring/Strawberry"
+    },
+    {
+      "name": "Cauliflower",
+      "type": "item",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauliflower",
+      "path": "~/Crops/Spring/Cauliflower"
+    },
+    {
+      "name": "Pepper",
+      "type": "item",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pepper",
+      "path": "~/Crops/Summer/Pepper"
+    },
+    {
+      "name": "Grapes",
+      "type": "item",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grapes",
+      "path": "~/Crops/Fall/Grapes"
+    },
+    {
+      "name": "Parsnip",
+      "type": "item",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parsnip",
+      "path": "~/Crops/Spring/Parsnip"
+    },
+    {
+      "name": "Coffee",
+      "type": "item",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coffee",
+      "path": "~/FoodItems"
+    },
+    {
+      "name": "Tea",
+      "type": "item",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tea",
+      "path": "~/FoodItems"
+    },
+    {
+      "name": "CabbageRed",
+      "type": "item",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cabbage_red",
+      "path": "~/Crops/Summer/CabbageR"
+    },
+    {
+      "name": "Potato",
+      "type": "item",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potato",
+      "path": "~/Crops/Spring/Potato"
+    },
+    {
+      "name": "Tv",
+      "type": "block",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tv",
+      "path": "~/Decoration"
+    },
+    {
+      "name": "TvGui",
+      "type": "gui",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tv_gui",
+      "path": "~/Decoration"
+    },
+    {
+      "name": "OracleDisplayConditions1",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oracle_display_conditions_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Decoration"
+    },
+    {
+      "name": "OracleDisplayConditions2",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oracle_display_conditions_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Decoration"
+    },
+    {
+      "name": "OracleDisplayConditions3",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oracle_display_conditions_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Decoration"
+    },
+    {
+      "name": "Remote1",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Decoration"
+    },
+    {
+      "name": "Remote2",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Decoration"
+    },
+    {
+      "name": "Remote3",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Decoration"
+    },
+    {
+      "name": "RemoteOff",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_off",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Decoration"
+    },
+    {
+      "name": "ProfessionallyPicked",
+      "type": "achievement",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "professionally_picked",
+      "path": "~/Advancements"
     }
   ],
   "variable_elements": [
@@ -2406,13 +2657,13 @@
       "name": "proficiencyFarm",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "1.0"
     },
     {
       "name": "dailyLuck",
       "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
+      "scope": "map",
+      "value": "1.2"
     }
   ],
   "sound_elements": [],
@@ -2426,6 +2677,7 @@
       "block.sprout.wet_earth": "Tilled Earth",
       "block.starcraftvalley.tea_s_4": "Tea Plant",
       "block.starcraftvalley.shippingbin": "Shippingbin",
+      "advancements.professionally_picked.title": "Professionally Picked",
       "block.starcraftvalley.cauliflower_s_1": "Cauliflower",
       "block.starcraftvalley.cauliflower_s_2": "Cauliflower",
       "block.starcraftvalley.keg_processing": "Keg",
@@ -2459,6 +2711,7 @@
       "block.sprout.potato_s_2": "Potato Stalk",
       "block.sprout.potato_s_1": "Potato Stalk",
       "item.sprout.wheat_seeds": "Wheat Seeds",
+      "block.sprout.tv": "Tv",
       "block.starcraftvalley.parsnip_s_1": "Parsnip",
       "itemGroup.tabtabcrops": "[Sprout] Crops",
       "block.starcraftvalley.parsnip_s_3": "Parsnip",
@@ -2519,7 +2772,8 @@
       "item.starcraftvalley.cauliflower_seeds": "Cauliflower Seeds",
       "block.starcraftvalley.s": "Parsnip",
       "item.sprout.pickaxebasic": "Pickaxebasic [B]",
-      "item.sprout.potato": "Strawberry",
+      "item.sprout.potato": "Potato",
+      "advancements.professionally_picked.descr": "When harvesting crops, the items will automatically be put in your inventory",
       "item.starcraftvalley.tea_seeds": "Tea Sapling",
       "item.sprout.strawberry": "Strawberry",
       "item.sprout.fertilizerspeed_1": "Speed Grow",
@@ -2694,6 +2948,14 @@
       {
         "name": "Guis",
         "children": []
+      },
+      {
+        "name": "Decoration",
+        "children": []
+      },
+      {
+        "name": "Advancements",
+        "children": []
       }
     ]
   },
@@ -2715,5 +2977,5 @@
     "modElementsPackage": "net.mcreator.starcraftvalley",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200115515
+  "mcreatorVersion": 202200118711
 }

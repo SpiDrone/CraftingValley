@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "sprout:strawberry"
+    },
+    "title": {
+      "translate": "advancements.professionally_picked.title"
+    },
+    "description": {
+      "translate": "advancements.professionally_picked.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "professionally_picked": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

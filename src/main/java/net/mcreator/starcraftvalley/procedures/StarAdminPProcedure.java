@@ -299,6 +299,56 @@ public class StarAdminPProcedure {
 					}, _bpos);
 				}
 			}
+		} else if ((new Object() {
+			public String getText() {
+				String param = (String) cmdparams.get("0");
+				if (param != null) {
+					return param;
+				}
+				return "";
+			}
+		}.getText()).equals("farming")) {
+			if ((new Object() {
+				public String getText() {
+					String param = (String) cmdparams.get("1");
+					if (param != null) {
+						return param;
+					}
+					return "";
+				}
+			}.getText()).equals("p") && !(new Object() {
+				public String getText() {
+					String param = (String) cmdparams.get("2");
+					if (param != null) {
+						return param;
+					}
+					return "";
+				}
+			}.getText()).equals("")) {
+				{
+					double _setval = new Object() {
+						double convert(String s) {
+							try {
+								return Double.parseDouble(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
+						}
+					}.convert(new Object() {
+						public String getText() {
+							String param = (String) cmdparams.get("2");
+							if (param != null) {
+								return param;
+							}
+							return "";
+						}
+					}.getText());
+					entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.proficiencyFarm = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 		}
 	}
 }

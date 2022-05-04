@@ -3,6 +3,7 @@ package net.mcreator.starcraftvalley.procedures;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 
+import net.mcreator.starcraftvalley.block.WetEarthFBlock;
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
 import net.mcreator.starcraftvalley.SproutMod;
@@ -37,7 +38,8 @@ public class BreakCheckProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		if (!((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == TilledEarthBlock.block
-				|| (world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == WetEarthBlock.block)) {
+				|| (world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == WetEarthBlock.block
+				|| (world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == WetEarthFBlock.block)) {
 			world.destroyBlock(new BlockPos(x, y, z), false);
 		}
 	}

@@ -76,7 +76,7 @@ public class ShippingBinDepositProcedure {
 				} else if (TeaItem.block == (item).getItem()) {
 					sellPrice = 30;
 				}
-				if (((item).getOrCreateTag().getString("quality")).equals("Quality: \u00A77\u2605")) {
+				if (((item).getOrCreateTag().getString("quality")).equals("\u00A77\u2605")) {
 					{
 						double _setval = ((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new SproutModVariables.PlayerVariables())).shippingBin + Math.ceil(1.2 * sellPrice));
@@ -85,7 +85,7 @@ public class ShippingBinDepositProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-				} else if (((item).getOrCreateTag().getString("quality")).equals("Quality: \u00A76\u2605\u2605")) {
+				} else if (((item).getOrCreateTag().getString("quality")).equals("\u00A76\u2605\u2605")) {
 					{
 						double _setval = ((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new SproutModVariables.PlayerVariables())).shippingBin + Math.ceil(1.4 * sellPrice));
@@ -94,7 +94,7 @@ public class ShippingBinDepositProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-				} else if (((item).getOrCreateTag().getString("quality")).equals("Quality: \u00A7d\u2605\u2605\u2605")) {
+				} else if (((item).getOrCreateTag().getString("quality")).equals("\u00A7d\u2605\u2605\u2605")) {
 					{
 						double _setval = ((entity.getCapability(SproutModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new SproutModVariables.PlayerVariables())).shippingBin + Math.ceil(1.8 * sellPrice));

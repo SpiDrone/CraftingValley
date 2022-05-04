@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.procedures.CoffeeFoodEatenProcedure;
 import net.mcreator.starcraftvalley.itemgroup.TabFoodstuffItemGroup;
@@ -26,26 +27,21 @@ public class TeaItem extends SproutModElements.ModElement {
 	public static final Item block = null;
 
 	public TeaItem(SproutModElements instance) {
-		super(instance, 111);
+		super(instance, 173);
 	}
 
 	@Override
 	public void initElements() {
-		elements.items.add(() -> new FoodItemCustom());
+		elements.items.add(() -> new ItemCustom());
 	}
 
-	public static class FoodItemCustom extends Item {
-		public FoodItemCustom() {
+	public static class ItemCustom extends Item {
+		public ItemCustom() {
 			super(new Item.Properties().group(TabFoodstuffItemGroup.tab).maxStackSize(32).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(4).saturation(0.4f)
 
 							.build()));
 			setRegistryName("tea");
-		}
-
-		@Override
-		public int getUseDuration(ItemStack stack) {
-			return 27;
 		}
 
 		@Override
@@ -56,6 +52,21 @@ public class TeaItem extends SproutModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getEatSound() {
 			return net.minecraft.util.SoundEvents.ENTITY_GENERIC_DRINK;
+		}
+
+		@Override
+		public int getItemEnchantability() {
+			return 0;
+		}
+
+		@Override
+		public int getUseDuration(ItemStack itemstack) {
+			return 27;
+		}
+
+		@Override
+		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+			return 0F;
 		}
 
 		@Override

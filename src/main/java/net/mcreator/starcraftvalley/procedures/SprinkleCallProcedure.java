@@ -53,7 +53,7 @@ public class SprinkleCallProcedure {
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(x, y, z), "fertilizer") == 0) {
+			}.getValue(world, new BlockPos(x, y - 1, z), "fertilizer") == 0) {
 				{
 					BlockPos _bp = new BlockPos(x, y - 1, z);
 					BlockState _bs = WetEarthBlock.block.getDefaultState();

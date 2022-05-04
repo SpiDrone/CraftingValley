@@ -1,0 +1,140 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 180,
+    "height": 100,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "tvremote.png",
+          "use1Xscale": false,
+          "name": "tvremote.png",
+          "x": 123,
+          "y": 70
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "orb.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "OracleDisplayConditions2"
+          },
+          "name": "orb.png",
+          "x": 123,
+          "y": 70
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "orbr.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "OracleDisplayConditions1"
+          },
+          "name": "orbr.png",
+          "x": 123,
+          "y": 70
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "orbg.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "OracleDisplayConditions3"
+          },
+          "name": "orbg.png",
+          "x": 123,
+          "y": 70
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "1",
+          "onClick": {
+            "name": "Remote1"
+          },
+          "width": 19,
+          "height": 20,
+          "name": "1",
+          "x": 163,
+          "y": 171
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Off",
+          "onClick": {
+            "name": "RemoteOff"
+          },
+          "width": 31,
+          "height": 20,
+          "name": "Off",
+          "x": 122,
+          "y": 171
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "2",
+          "onClick": {
+            "name": "Remote2"
+          },
+          "width": 19,
+          "height": 20,
+          "name": "2",
+          "x": 184,
+          "y": 171
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "3",
+          "onClick": {
+            "name": "Remote3"
+          },
+          "width": 19,
+          "height": 20,
+          "name": "3",
+          "x": 205,
+          "y": 171
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Luck : <VAR:dailyLuck>",
+          "color": {
+            "value": -3355648,
+            "falpha": 0.0
+          },
+          "name": "Luck : <VAR:dailyLuck>",
+          "x": 122,
+          "y": 57
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

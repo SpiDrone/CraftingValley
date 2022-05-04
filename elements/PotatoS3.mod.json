@@ -1,5 +1,5 @@
 {
-  "_fv": 27,
+  "_fv": 28,
   "_type": "block",
   "definition": {
     "texture": "potato3",
@@ -54,7 +54,7 @@
     "material": {
       "value": "PLANTS"
     },
-    "tickRate": 20,
+    "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -65,7 +65,7 @@
     "creativePickItem": {
       "value": "CUSTOM:PotatoSeeds"
     },
-    "offsetType": "XZ",
+    "offsetType": "NONE",
     "aiPathNodeType": "WALKABLE",
     "flammability": 4,
     "fireSpreadSpeed": 0,
@@ -104,7 +104,7 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": false,
+    "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 0,

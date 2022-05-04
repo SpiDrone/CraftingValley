@@ -16,6 +16,7 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.item.PepperSeedsItem;
 import net.mcreator.starcraftvalley.item.CabbageRedSeedsItem;
+import net.mcreator.starcraftvalley.block.WetEarthFBlock;
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
 import net.mcreator.starcraftvalley.block.PepperS1Block;
@@ -69,7 +70,8 @@ public class SummerSeedsPlantProcedure {
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		if (SproutModVariables.MapVariables.get(world).season == 1
 				&& ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == TilledEarthBlock.block
-						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthBlock.block)) {
+						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthBlock.block
+						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthFBlock.block)) {
 			if (PepperSeedsItem.block == itemstack.getItem()) {
 				world.setBlockState(new BlockPos(x, y + 1, z), PepperS1Block.block.getDefaultState(), 3);
 				if (!world.isRemote()) {

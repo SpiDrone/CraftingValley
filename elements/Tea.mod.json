@@ -1,29 +1,42 @@
 {
-  "_fv": 27,
-  "_type": "food",
+  "_fv": 28,
+  "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "cup_tea",
     "customModelName": "Normal",
     "name": "Tea",
     "rarity": "COMMON",
-    "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:TabFoodstuff"
     },
     "stackSize": 32,
+    "enchantability": 0,
+    "useDuration": 27,
+    "toolType": 0.0,
+    "damageCount": 0,
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [],
+    "hasGlow": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onFinishUsingItem": {
+      "name": "CoffeeFoodEaten"
+    },
+    "hasDispenseBehavior": false,
+    "isFood": true,
     "nutritionalValue": 4,
     "saturation": 0.4,
-    "eatingSpeed": 27,
-    "resultItem": {
+    "eatResultItem": {
       "value": ""
     },
-    "forDogs": false,
+    "isMeat": false,
     "isAlwaysEdible": false,
-    "animation": "drink",
-    "hasGlow": false,
-    "onEaten": {
-      "name": "CoffeeFoodEaten"
-    }
+    "animation": "drink"
   }
 }

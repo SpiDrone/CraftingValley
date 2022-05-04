@@ -7,7 +7,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.block.WheatS4Block;
@@ -1297,12 +1296,6 @@ public class WetEarthUpdateProcedure {
 								}
 							}
 						}
-					}
-				} else {
-					{
-						BlockPos _bp = new BlockPos(x, y + 1, z);
-						BlockState _bs = Blocks.MAGMA_BLOCK.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
 					}
 				}
 			}

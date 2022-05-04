@@ -7,6 +7,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.starcraftvalley.block.WheatS1Block;
+import net.mcreator.starcraftvalley.block.WetEarthFBlock;
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
 import net.mcreator.starcraftvalley.SproutModVariables;
@@ -43,7 +44,8 @@ public class WheatSeedsPlantProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		if ((SproutModVariables.MapVariables.get(world).season == 1 || SproutModVariables.MapVariables.get(world).season == 2)
 				&& ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == TilledEarthBlock.block
-						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthBlock.block)) {
+						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthBlock.block
+						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthFBlock.block)) {
 			world.setBlockState(new BlockPos(x, y + 1, z), WheatS1Block.block.getDefaultState(), 3);
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(x, y + 1, z);

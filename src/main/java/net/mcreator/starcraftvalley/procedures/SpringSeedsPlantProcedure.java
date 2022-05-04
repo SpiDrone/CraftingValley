@@ -18,6 +18,7 @@ import net.mcreator.starcraftvalley.item.StrawberrySeedsItem;
 import net.mcreator.starcraftvalley.item.PotatoSeedsItem;
 import net.mcreator.starcraftvalley.item.ParsnipSeedsItem;
 import net.mcreator.starcraftvalley.item.CauliflowerSeedsItem;
+import net.mcreator.starcraftvalley.block.WetEarthFBlock;
 import net.mcreator.starcraftvalley.block.WetEarthBlock;
 import net.mcreator.starcraftvalley.block.TilledEarthBlock;
 import net.mcreator.starcraftvalley.block.StrawberryS1Block;
@@ -73,7 +74,8 @@ public class SpringSeedsPlantProcedure {
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		if (SproutModVariables.MapVariables.get(world).season == 0
 				&& ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == TilledEarthBlock.block
-						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthBlock.block)) {
+						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthBlock.block
+						|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == WetEarthFBlock.block)) {
 			if (PotatoSeedsItem.block == itemstack.getItem()) {
 				world.setBlockState(new BlockPos(x, y + 1, z), PotatoS1Block.block.getDefaultState(), 3);
 				if (!world.isRemote()) {

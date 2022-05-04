@@ -6,12 +6,14 @@ import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.starcraftvalley.SproutModVariables;
 import net.mcreator.starcraftvalley.SproutMod;
 
+import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
@@ -91,6 +93,8 @@ public class DayCycleProcedure {
 					}
 				}
 			}
+			SproutModVariables.MapVariables.get(world).dailyLuck = (MathHelper.nextDouble(new Random(), 0.8, 1.2));
+			SproutModVariables.MapVariables.get(world).syncData(world);
 		}
 	}
 }
